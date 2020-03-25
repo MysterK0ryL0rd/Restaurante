@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EBF1"
+    tools:context="com.gm3s.erp.gm3srest.View.CorteCaja">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:background="#2196F3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_bar"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <EditText
+            android:id="@+id/tvDate"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:drawableRight="@drawable/calendar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:focusable="false"
+            android:background="@drawable/button_style19"
+            android:gravity="center"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/tvDate2"
+            android:layout_width="125dp"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:drawableRight="@drawable/calendar"
+            android:background="@drawable/button_style19"
+            android:layout_above="@+id/button"
+            android:layout_toRightOf="@+id/tvDate"
+            android:layout_toEndOf="@+id/tvDate"
+            android:textSize="12sp"
+            android:focusable="false"
+            android:layout_marginLeft="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/escaner_txt_serie"
+            android:textSize="10sp"
+            android:focusable="false"
+            android:layout_alignTop="@+id/escaner_btn_serie"
+            android:layout_alignLeft="@+id/linearLayout2"
+            android:layout_alignStart="@+id/linearLayout2"
+            android:layout_alignBottom="@+id/escaner_btn_serie"
+            android:textColor="#4cbee8"
+            android:gravity="center"
+            android:background="@drawable/button_style11"
+            android:layout_marginLeft="10dp"
+            android:autoText="false" />
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="  Serie  "
+            android:id="@+id/escaner_btn_serie"
+            android:background="@drawable/button_style17"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignLeft="@+id/escaner_txt_serie"
+            android:layout_alignStart="@+id/escaner_txt_serie"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="  Consultar  "
+            android:id="@+id/consultar"
+            android:textColor="#ffffff"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/button_style18"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_toRightOf="@+id/escaner_btn_serie"
+            android:layout_toEndOf="@+id/escaner_btn_serie"
+            android:layout_above="@+id/scrollview_prueba2"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="  Limpiar  "
+            android:id="@+id/limpiar_corte"
+            android:textColor="#ffffff"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/button_style18"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/consultar"
+            android:layout_toEndOf="@+id/consultar"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_above="@+id/scrollview_prueba2"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview_prueba2"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2"
+        android:background="@drawable/button_style13"
+        android:layout_toLeftOf="@+id/scrollview_prueba3"
+        android:layout_toStartOf="@+id/scrollview_prueba3"
+        android:layout_margin="15dp">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalview_prueba2"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:foregroundGravity="center"
+            android:gravity="center">
+
+
+            <TableLayout
+                android:id="@+id/tabla_codigos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+
+
+                <TableRow android:background="#3D6AB3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Folio"
+                        style="@style/TableHeader3"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha"
+                        style="@style/TableHeader3"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        style="@style/TableHeader3"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Usuario"
+                        style="@style/TableHeader3"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente"
+                        style="@style/TableHeader3"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo"
+                        style="@style/TableHeader3"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estatus"
+                        style="@style/TableHeader3"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollview_prueba3"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="wrap_content"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true"
+        android:background="@drawable/button_style13"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalview_prueba3"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="wrap_content"
+        android:background="#FFFFFF"
+        android:foregroundGravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+
+
+
+    <TableLayout
+        android:id="@+id/tabla_totales"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/scrollview_prueba2">
+
+
+
+
+
+        <TableRow android:background="#3D6AB3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTALES"
+                android:id="@+id/textView7"
+                style="@style/TableHeader3"
+                android:layout_below="@+id/boton_articulos"
+                android:layout_alignRight="@+id/serie"
+                android:layout_alignEnd="@+id/serie"
+                android:background="#3D6AB3"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+
+        </TableRow>
+        <TableRow android:background="#3D6AB3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL"
+                style="@style/TableHeader3"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/boton_articulos"
+                android:layout_alignRight="@+id/serie"
+                android:layout_alignEnd="@+id/serie"
+                android:textColor="#ffffff" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/boton_articulos"
+                android:layout_alignRight="@+id/serie"
+                android:layout_alignEnd="@+id/serie"
+                android:textColor="#ffffff"
+                android:id="@+id/corte_caja_total"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+                </TableRow>
+
+
+    </TableLayout>
+
+    </HorizontalScrollView>
+    </ScrollView>
+
+
+</RelativeLayout>

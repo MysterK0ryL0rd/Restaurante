@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282828">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<ScrollView
+        android:id="@+id/scrollview_prueba1"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:id="@+id/guardar_pedido"
+            android:layout_below="@+id/guardar_pedido_separado"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:id="@+id/btn_cancelar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar Separado"
+            android:id="@+id/guardar_pedido_separado"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn_cancelar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ScrollView
+            android:id="@+id/scrollview_prueba2"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="wrap_content"
+            android:scrollbarStyle="insideInset"
+            android:fillViewport="true"
+            android:background="#282828"
+            android:layout_gravity="center"
+            android:foregroundGravity="top"
+            android:layout_below="@+id/guardar_pedido"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalview_prueba2"
+                android:layout_height="fill_parent"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="fill_parent"
+                android:fillViewport="true"
+                android:background="#282828"
+                android:foregroundGravity="top"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TableLayout
+                    android:id="@+id/tabla_codigos"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"
+
+                    android:background="@drawable/table_style1"
+                    android:gravity="top"
+                    android:foregroundGravity="center"
+                    android:layout_gravity="top"
+                    >
+
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3D6AB3">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:text="Cantidad"
+                            style="@style/TableHeader3"
+                            />
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Descripcion"
+                            style="@style/TableHeader3"
+                            />
+
+                        <TextView
+                            android:layout_column="2"
+                            android:text="Precio"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="3"
+                            android:text="Descuento"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="4"
+                            android:text="Total"
+                            style="@style/TableHeader3"
+                            />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

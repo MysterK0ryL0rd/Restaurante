@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dialog_bc"
+    android:background="#262626">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nombre "
+        android:id="@+id/textView3"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/busclie_etx_nom"
+        android:layout_marginRight="40dp"
+        android:layout_alignBottom="@+id/textView3"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ap.Paterno "
+        android:id="@+id/textView4"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/busclie_etx_app"
+        android:background="@drawable/edit_text_style3"
+        android:layout_above="@+id/textView12"
+        android:layout_alignRight="@+id/busclie_etx_nom"
+        android:layout_alignEnd="@+id/busclie_etx_nom"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12" />
+
+    <Button
+        style="@style/DefaultButtonText2"
+        android:background="@drawable/button_style4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Aceptar     "
+        android:id="@+id/busclie_btn_aceptar"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@+id/busclie_btn_cancelar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Cancelar     "
+        android:id="@+id/busclie_btn_cancelar"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_style4"
+        android:layout_below="@+id/busclie_etx_rfc"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        style="@style/DefaultButtonText2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ap. Materno "
+        android:id="@+id/textView12"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="RFC "
+        android:id="@+id/textView13"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView12"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/busclie_etx_apm"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_alignRight="@+id/busclie_etx_app"
+        android:layout_alignEnd="@+id/busclie_etx_app"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView12" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/busclie_etx_rfc"
+        android:layout_alignBottom="@+id/textView13"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_alignLeft="@+id/busclie_etx_apm"
+        android:layout_alignStart="@+id/busclie_etx_apm"
+        android:layout_alignRight="@+id/busclie_etx_apm"
+        android:layout_alignEnd="@+id/busclie_etx_apm" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gm3s.erp.gm3srest.View.ListaOrdenServicio">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:background="#2196F3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_bar"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <EditText
+            android:id="@+id/tvDate"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:drawableRight="@drawable/calendar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="10sp"
+            android:focusable="false"
+            android:background="@drawable/button_style19"
+            android:gravity="center"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/tvDate2"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:drawableRight="@drawable/calendar"
+            android:background="@drawable/button_style19"
+            android:layout_above="@+id/button"
+            android:layout_toRightOf="@+id/tvDate"
+            android:layout_toEndOf="@+id/tvDate"
+            android:textSize="10sp"
+            android:focusable="false"
+            android:layout_marginLeft="7dp"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Busqueda por folio:  "
+            android:id="@+id/textView179"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/txtFolio_os" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Consultar"
+            android:id="@+id/btnConsultar_os"
+            android:background="@drawable/boton_verde_small"
+            android:textColor="#ffffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#33daff"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignLeft="@+id/linearLayout3"
+        android:layout_alignStart="@+id/linearLayout3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="125dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView5"
+        android:layout_below="@+id/linearLayout3">
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/tabla_contenido">
+
+
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

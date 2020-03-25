@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#262626">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="100.00"
+        android:id="@+id/cambio_txv_total"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total: "
+        android:id="@+id/textView17"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_alignTop="@+id/cambio_txv_total"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Efectivo: "
+        android:id="@+id/textView19"
+        android:layout_marginTop="35dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/cambio_txv_total"
+        android:layout_alignLeft="@+id/cambio_btn_cancelar"
+        android:layout_alignStart="@+id/cambio_btn_cancelar"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/cambio_etx_cambio"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignLeft="@+id/cambio_txv_total"
+        android:layout_alignStart="@+id/cambio_txv_total" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Generar     "
+        android:id="@+id/cambio_btn_generar"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        style="@style/DefaultButtonText2"
+        android:background="@drawable/button_style4"
+        android:layout_below="@+id/cambio_etx_cambio"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Cancelar     "
+        android:id="@+id/cambio_btn_cancelar"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        style="@style/DefaultButtonText2"
+        android:background="@drawable/button_style4"
+        android:layout_alignTop="@+id/cambio_btn_generar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

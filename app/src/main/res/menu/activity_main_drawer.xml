@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/nav1" android:title="Documentos">
+        <menu>
+     <item android:id="@+id/nav_opc1_0"    android:title="Pedido"  android:icon="@drawable/doc1"/>
+    <item android:id="@+id/nav_opc1_3"    android:title="Remision" android:icon="@drawable/doc1"/>
+    <item android:id="@+id/nav_opc1_2"    android:title="Factura"  android:icon="@drawable/doc1"/>
+    <item android:id="@+id/nav_opc1_5"    android:title="Honorarios" android:icon="@drawable/doc1"/>
+    <item android:id="@+id/nav_opc1_6"    android:title="Arrendamiento" android:icon="@drawable/doc1"/>
+        </menu>
+</item>
+
+
+
+
+    <item android:title="Reportes" >
+        <menu>
+            <item android:id="@+id/nav_opc1_4"    android:title="Corte de Caja" android:icon="@drawable/cash"/>
+            <item android:id="@+id/nav_opc4_5"     android:title="Actividad Vacia" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc4_6"     android:title="Listado O.Servicio" android:icon="@drawable/triangle"/>
+
+    <item android:id="@+id/nav_opc3"  android:title="Reporte de Existencias" android:icon="@drawable/triangle"/>
+
+
+
+            <item android:id="@+id/nav_opc1_1"    android:title="Totales Por Serie 2" android:icon="@drawable/triangle"/>
+
+            <item android:id="@+id/nav_opc4_1"     android:title="Reporte Gerencial" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc4_2"     android:title="Estado de Resultados" android:icon="@drawable/triangle"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Administracion Financiera">
+        <menu> </menu>
+    </item>
+
+
+    <item android:title="Administracion Gerencial">
+        <menu>
+
+
+        </menu>
+    </item>
+
+
+    <item android:title="ABC Entidades" android:visible="false">
+        <menu>
+            <item android:id="@+id/nav_opc4_4"     android:title="Clientes" android:icon="@drawable/custom"/>
+            <item android:id="@+id/nav_opc2_3" android:title="Busqueda Inventario" android:icon="@drawable/search1"/>
+            <item android:id="@+id/nav_opc2_1" android:title="Insertar Articulo" android:icon="@drawable/circle"/>
+            <item android:id="@+id/nav_opc2"  android:title="Buscar Articulo"  android:icon="@drawable/search1"/>
+            <item android:id="@+id/nav_opc2_2" android:title="Lista Articulos" android:icon="@drawable/box"/>
+            <item android:id="@+id/nav_opc4_3"     android:title="Agregar Usuario" android:icon="@drawable/triangle"/>
+        </menu>
+</item>
+
+    <item android:title="Produccion Textil" android:visible="false">
+        <menu>
+            <item android:id="@+id/nav_opc6_1"     android:title="Movimiento Consumo" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc6_2"     android:title="Asignacion Racks" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc6_3"     android:title="Consulta Racks" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc6_4"     android:title="Consultar Ubicacion" android:icon="@drawable/triangle"/>
+        </menu>
+    </item>
+
+    <item android:title="Restaurante">
+        <menu>
+            <item android:id="@+id/nav_opc5_2"     android:title="Menu Mesas" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_6"     android:title="Menu Cajas" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_3"     android:title="Pendientes x Linea" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_4"     android:title="Pedidos General" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_5"     android:title="Menu x Tiempos" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_7"     android:visible="false" android:title="Demo Mapa" android:icon="@drawable/triangle"/>
+            <item android:id="@+id/nav_opc5_8"     android:visible="false" android:title="Demo Interfaz" android:icon="@drawable/triangle"/>
+        </menu>
+    </item>
+
+</menu>

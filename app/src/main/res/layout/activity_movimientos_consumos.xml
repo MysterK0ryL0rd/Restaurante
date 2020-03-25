@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="com.gm3s.erp.gm3srest.MovimientosConsumos">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No. Orden"
+        android:id="@+id/textView73"
+        android:layout_above="@+id/scrollview_prueba2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-light" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etn_mov_con"
+        android:layout_below="@+id/app_bar"
+        android:layout_toRightOf="@+id/textView73"
+        android:layout_toEndOf="@+id/textView73" />
+
+    <Button
+        style="DefaultButtonText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:id="@+id/btn_mov_con"
+        android:layout_below="@+id/app_bar"
+        android:layout_toRightOf="@+id/etn_mov_con"
+        android:layout_toEndOf="@+id/etn_mov_con"
+        android:background="@drawable/button_style4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollview_prueba2"
+        android:layout_height="fill_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="fill_parent"
+        android:scrollbarStyle="insideInset"
+        android:fillViewport="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/tabla_totales"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btn_mov_con">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalview_prueba2"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent">
+
+
+            <TableLayout
+                android:id="@+id/tabla_codigos"
+                android:layout_height="wrap_content" android:layout_width="fill_parent"
+                android:stretchColumns="0,1,2,3,4">
+
+
+
+
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+</RelativeLayout>

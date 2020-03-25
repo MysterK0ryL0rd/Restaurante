@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="com.gm3s.erp.gm3srest.View.NuevoArticulo">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/app_bar">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/textView26"/>
+
+
+            <Spinner
+                android:textColor="#ffffff"
+                style="@style/TextWhite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spin_tipo"
+                android:entries="@array/tipo_articulo"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N. Corto"
+                android:id="@+id/textView22"
+                />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/n_corto_articulo"
+                android:background="#FFFFFF"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:id="@+id/textView23" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/n_articulo"
+                android:background="#FFFFFF"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:text="Descripcion "
+                android:id="@+id/textView24" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/d_articulo"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:background="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:text="Gravable"
+                android:id="@+id/textView27" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grav_articulo" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:text="Codigo SKU   "
+                android:id="@+id/textView25" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/sku_articulo"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:background="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:text="Unidad"
+            android:id="@+id/textView29" />
+
+            <Button
+                style="@style/DefaultButtonText4"
+                android:background="@drawable/button_style4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Seleccionar"
+                android:id="@+id/btn_unidad"
+                android:textSize="10dp" />
+
+        </TableRow>
+
+        <TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:text="Estatus"
+        android:id="@+id/textView30" />
+
+
+    <Spinner
+        style="@style/TextWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spin_estatus"
+        android:entries="@array/estatus_articulo"/>
+
+</TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/btn_nuevo_art"
+        style="@style/DefaultButtonText3"
+        android:background="@drawable/button_style4"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/tableLayout4"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

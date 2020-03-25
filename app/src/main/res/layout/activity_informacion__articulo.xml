@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="com.gm3s.erp.gm3srest.View.Informacion_Articulo"
+    >
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:id="@+id/tableLayout4"
+                android:layout_centerHorizontal="true">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Tipo"
+                        android:id="@+id/textView26"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+
+                    <Spinner
+                        android:textColor="#ffffff"
+                        style="@style/TextWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spin_tipo"
+                        android:entries="@array/tipo_articulo"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="N. Corto"
+                        android:id="@+id/textView22"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/n_corto_articulo"
+                        android:textIsSelectable="false"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Nombre"
+                        android:id="@+id/textView23"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/n_articulo"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Descripcion "
+                        android:id="@+id/textView24"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/d_articulo"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Gravable"
+                        android:id="@+id/textView27"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/grav_articulo" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Codigo SKU"
+                        android:id="@+id/textView25"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/sku_articulo"
+                        android:textSize="15sp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Unidad"
+                        android:id="@+id/textView29"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="70sp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/tv_unidad"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-light"/>
+
+                        <Button
+                            style="@style/DefaultButtonText4"
+                            android:background="@drawable/button_style4"
+                            android:layout_width="40sp"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccionar"
+                            android:id="@+id/btn_unidad"
+                            android:textSize="8dp"
+                            android:layout_weight="0.60" />
+                    </TableRow>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TextWhite"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Estatus"
+                        android:id="@+id/textView30"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light"/>
+
+
+                    <Spinner
+                        style="@style/TextWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spin_estatus"
+                        android:entries="@array/estatus_articulo"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Costo"
+                        android:id="@+id/textView71"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/costo_articulo"
+                        android:textSize="15sp"
+                        android:singleLine="true"
+                        android:focusable="false" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        style="@style/TextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Precio Base"
+                        android:id="@+id/textView72"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-light" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/precioBase_articulo"
+                        android:textSize="15sp"
+                        android:singleLine="true"
+                        android:focusable="false" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:id="@+id/btn_nuevo_art"
+                style="@style/DefaultButtonText3"
+                android:background="@drawable/button_style4"
+                android:layout_marginTop="44dp"
+                android:layout_below="@+id/tableLayout4"
+                android:layout_alignRight="@+id/tableLayout4"
+                android:layout_alignEnd="@+id/tableLayout4"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precios"
+                android:background="@drawable/button_style4"
+                style="@style/DefaultButtonText3"
+                android:id="@+id/info_art_costos_btn"
+                android:layout_alignTop="@+id/btn_nuevo_art"
+                android:layout_alignLeft="@+id/tableLayout4"
+                android:layout_alignStart="@+id/tableLayout4" />
+
+            <Button
+                style="@style/DefaultButtonText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Costos"
+                android:id="@+id/btn_costos"
+                android:layout_alignBottom="@+id/btn_nuevo_art"
+                android:layout_toRightOf="@+id/info_art_costos_btn"
+                android:layout_toLeftOf="@+id/btn_nuevo_art"
+                android:layout_toStartOf="@+id/btn_nuevo_art"
+                android:background="@drawable/button_style4" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

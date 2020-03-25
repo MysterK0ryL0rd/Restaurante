@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282828">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<ScrollView
+        android:id="@+id/scrollview_prueba1"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#282828"
+            android:id="@+id/tableLayout2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/escaner_etx_pro"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignBottom="@+id/escaner_btn_fpago"
+                    android:layout_toLeftOf="@+id/escaner_btn_fpago"
+                    android:layout_toStartOf="@+id/escaner_btn_fpago"
+                    android:layout_alignTop="@+id/escaner_btn_fpago"
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar"
+                    android:drawableLeft="@drawable/find_image"
+                    android:id="@+id/btn_lista_buscar"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/btn_lista_ok"
+                    android:layout_toEndOf="@+id/btn_lista_ok"
+                    android:background="@drawable/button_style8"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:layout_above="@+id/scrollview_prueba2"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrar"
+                    android:id="@+id/btn_lista_borrar"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/btn_lista_ok"
+                    android:layout_toEndOf="@+id/btn_lista_ok"
+                    android:background="@drawable/button_style8"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:layout_above="@+id/scrollview_prueba2"
+                    android:layout_marginLeft="10dp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview_prueba2"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent"
+            android:scrollbarStyle="insideInset"
+            android:fillViewport="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#282828"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tableLayout2">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalview_prueba2"
+                android:layout_height="fill_parent"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="fill_parent">
+
+
+                <TableLayout
+                    android:id="@+id/tabla_codigos"
+                    android:layout_height="wrap_content" android:layout_width="fill_parent"
+                    android:stretchColumns="0,1,2,3,4">
+
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3D6AB3">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:text="NOMBRE"
+                            style="@style/TableHeader3"
+                            />
+                        <TextView
+                            android:layout_column="1"
+                            android:text="COSTO"
+                            style="@style/TableHeader3"
+                            />
+
+                        <TextView
+                            android:layout_column="2"
+                            android:text="MI PRECIO"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="3"
+                            android:text="UTILIDAD"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="4"
+                            android:text="SKU"
+                            style="@style/TableHeader3"
+                            />
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/titulo"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Comensales: PreComanda" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Finalizar"
+        android:id="@+id/btn_finalizar" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:id="@+id/btn_regresar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" "
+        android:id="@+id/total_textView"
+        android:layout_gravity="center"
+        android:textColor="#77CB00"
+        android:textStyle="bold"
+        android:textSize="40sp" />
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="fill_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="fill_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fillViewport="false">
+
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:stretchColumns="0,1"
+                android:id="@+id/main_table"
+                android:layout_height="wrap_content" android:layout_width="fill_parent"
+                android:layout_alignParentTop="true">
+
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+
+</LinearLayout>

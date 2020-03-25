@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.gm3s.erp.gm3srest.UploadPhoto">
+
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/tipos_arhivo_rg"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignLeft="@+id/app_bar"
+        android:layout_alignStart="@+id/app_bar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capturar Foto"
+        android:id="@+id/cpic"
+        android:background="#17c117"
+        android:textColor="#ffffffff"
+        android:textStyle="bold"
+        android:layout_below="@+id/tipos_arhivo_rg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp" />
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:id="@+id/Imageprev"
+        android:layout_above="@+id/up"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cpic" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar"
+        android:id="@+id/up"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/cpic"
+        android:layout_alignStart="@+id/cpic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#039BE7"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="10sp" />
+</RelativeLayout>

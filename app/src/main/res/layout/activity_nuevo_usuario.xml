@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gm3s.erp.gm3srest.View.NuevoUsuario"
+    android:background="@drawable/back">
+
+    <RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TableLayout
+        android:background="@drawable/button_style7"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tableLayout6"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:id="@+id/textView39"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nu_nombre"
+                android:background="@drawable/button_style5"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usa turno acceso"
+                android:id="@+id/textView37"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                     android:id="@+id/nu_rg_1">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:id="@+id/nu_rb_1_1"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/nu_rb_1_2"
+                    android:checked="true"
+                    android:textColor="#ffffff" />
+                </RadioGroup>
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usa turno estricto"
+                android:id="@+id/textView38"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/nu_rg_2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:id="@+id/nu_rb_2_1"
+                    android:textColor="#ffffff" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:id="@+id/nu_rb_2_2"
+                        android:checked="true"
+                        android:textColor="#ffffff" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:id="@+id/textView28"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nu_usuario"
+                android:background="@drawable/button_style5"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo-e"
+                android:id="@+id/textView29"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nu_correo"
+                android:background="@drawable/button_style5"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:id="@+id/textView30"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nu_password"
+                android:background="@drawable/button_style5"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:inputType="textPassword" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conf. Password"
+                android:id="@+id/textView31"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nu_password2"
+                android:background="@drawable/button_style5"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:inputType="textPassword" />
+
+        </TableRow>
+
+
+
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estatus"
+                android:id="@+id/textView40"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nu_estatus"
+                android:maxWidth="100dp"
+                android:entries="@array/usuario_estatus"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maquilero"
+                android:id="@+id/textView41"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/nu_maq_et"
+                    android:background="@drawable/button_style5"
+                    android:textColor="#424b5c"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="10sp"
+                    android:enabled="false" />
+
+                <Button
+                    style="@style/DefaultButtonText2"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_style4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Seleccionar"
+                    android:id="@+id/nu_maq_bt" />
+            </TableRow>
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom. Sucursal"
+                android:id="@+id/textView42"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/nu_suc_et"
+                    android:background="@drawable/button_style5"
+                    android:textColor="#424b5c"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="10sp"
+                    android:enabled="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Sucursal"
+                    android:id="@+id/nu_suc_bt"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:textSize="10sp"
+                  />
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roles"
+                android:id="@+id/textView43"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Seleccionar"
+                    android:id="@+id/nu_roles"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:textSize="10sp"
+                    />
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:id="@+id/nu_cancelar"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/nu_guardar"
+            android:layout_toEndOf="@+id/nu_guardar"
+            style="@style/DefaultButtonText2"
+            android:background="@drawable/button_style4"
+                android:layout_column="0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:id="@+id/nu_guardar"
+                android:layout_marginLeft="63dp"
+                android:layout_marginStart="63dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/DefaultButtonText2"
+                android:background="@drawable/button_style4"
+                android:layout_column="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

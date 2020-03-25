@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.gm3s.erp.gm3srest.ContenedorFragmentos3">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+        <fragment android:name="com.gm3s.erp.gm3srest.MenuLineas3"
+                android:id="@+id/ejemplo"
+                android:layout_weight=".25"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+            />
+
+        <fragment android:name="com.gm3s.erp.gm3srest.MenuArticulosLineas3"
+            android:id="@+id/ejemplo2"
+            android:layout_weight=".75"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ejemplo"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

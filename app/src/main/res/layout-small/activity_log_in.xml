@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".LogIn"
+    android:background="@drawable/back">
+
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/logo3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btn_server"
+        android:src="@drawable/server"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_style6"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp">
+
+
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:id="@+id/server1"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/company2"
+            android:textColor="#424b5c"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/button_style5"
+            android:hint="N.Clave de Empresa"
+            android:textColorHint="#cccccc"
+            android:fontFamily="sans-serif-thin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/server2"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:textColor="#424b5c"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/button_style5"
+            android:drawableLeft="@drawable/user"
+            android:layout_below="@+id/server1"
+            android:hint="Clave de Usuario"
+            android:textColorHint="#cccccc"
+            android:fontFamily="sans-serif-thin"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/server3"
+            android:layout_width="match_parent"
+            android:textColor="#424b5c"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/button_style5"
+            android:drawableLeft="@drawable/password"
+            android:layout_below="@+id/server2"
+            android:hint="Contraseña"
+            android:fontFamily="sans-serif-thin"
+            android:textColorHint="#cccccc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/server3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView24" />
+
+        <Button
+            android:background="@drawable/button_style6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a1_4"
+            android:id="@+id/input_a1_4"
+            style="@style/DefaultButtonText2"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/textView24"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No estas registrado   SMALL"
+            android:id="@+id/textView22"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/input_a1_4"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/loader"
+            android:src="@drawable/loader"
+            android:visibility="visible"
+            android:layout_below="@+id/textView22"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

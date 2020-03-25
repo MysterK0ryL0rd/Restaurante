@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dialog_ba"
+    android:background="#262626">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nombre "
+        android:id="@+id/textView3"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombre_et"
+        android:layout_alignBottom="@+id/textView3"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="N. Corto "
+        android:id="@+id/textView4"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/corto_et"
+        android:textStyle="bold"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_alignRight="@+id/nombre_et"
+        android:layout_alignEnd="@+id/nombre_et"
+        android:layout_alignTop="@+id/textView4"
+        android:autoText="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Buscar     "
+        android:id="@+id/buscar_art"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        style="@style/DefaultButtonText2"
+        android:background="@drawable/button_style4"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Agregar     "
+        android:id="@+id/agregar"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        style="@style/DefaultButtonText2"
+        android:background="@drawable/button_style4"
+        android:layout_above="@+id/scrollview_prueba"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:id="@+id/scrollview_prueba"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="fill_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true"
+        android:layout_below="@+id/buscar_art"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalview_prueba"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dip">
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tabla_prueba"
+                android:layout_height="wrap_content" android:layout_width="match_parent"
+                android:background="#ffffff">
+            </TableLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SKU "
+        android:id="@+id/textView16"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="25dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sku_et"
+        android:background="@drawable/edit_text_style3"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_alignLeft="@+id/corto_et"
+        android:layout_alignStart="@+id/corto_et"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignRight="@+id/corto_et"
+        android:layout_alignEnd="@+id/corto_et" />
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gm3s.erp.gm3srest.View.Registro"
+    android:scaleType = "centerCrop"
+    android:background="@drawable/back">
+
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout2"
+            android:layout_below="@+id/app_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            >
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/input_a2_1"
+                android:inputType="textCapCharacters|text"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/button_style5"
+                android:drawableLeft="@drawable/company2"
+                android:hint="Clave de Empresa"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:textColorHint="#cccccc"/>
+
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/input_a2_2"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/button_style5"
+                android:drawableLeft="@drawable/user"
+                android:hint="Clave de Usuario"
+                android:textColorHint="#cccccc"
+                android:layout_below="@+id/input_a2_1"
+                android:layout_marginTop="20dp"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/input_a2_3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_style5"
+                android:textCursorDrawable="@null"
+                android:drawableLeft="@drawable/password"
+                android:hint="Contraseña"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:textColorHint="#cccccc"
+                android:layout_below="@+id/input_a2_2"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:id="@+id/input_a2_4"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/button_style5"
+                android:drawableLeft="@drawable/email"
+                android:hint="Correo Electronico"
+                android:textColorHint="#cccccc"
+                android:textColor="#424b5c"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:layout_below="@+id/input_a2_3"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="textEmailAddress" />
+
+
+            <Button
+                android:background="@drawable/button_style6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a2_6"
+                android:id="@+id/input_a2_6"
+                style="@style/DefaultButtonText2"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/input_a2_4"
+                android:layout_alignLeft="@+id/input_a2_4"
+                android:layout_alignStart="@+id/input_a2_4"
+                android:layout_alignRight="@+id/input_a2_4"
+                android:layout_alignEnd="@+id/input_a2_4"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light" />
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

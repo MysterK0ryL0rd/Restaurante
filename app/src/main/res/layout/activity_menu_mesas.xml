@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#4B4B4B">
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    </RelativeLayout>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personal"
+        android:id="@+id/switch_personal"
+        android:background="#FFFFFF"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="fill_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="fill_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fillViewport="false">
+
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:stretchColumns="0,1"
+                android:id="@+id/main_table"
+                android:layout_height="wrap_content" android:layout_width="fill_parent"
+                android:layout_alignParentTop="true">
+
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+
+</LinearLayout>

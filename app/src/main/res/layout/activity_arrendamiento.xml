@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<ScrollView
+        android:id="@+id/scrollview_prueba1"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#BF464646">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/escaner_txt_cliente"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="7sp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_alignTop="@+id/escaner_btn_cliente"
+                    android:layout_alignBottom="@+id/escaner_btn_cliente"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="#4cbee8" />
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:text="&lt; Cliente >"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:id="@+id/escaner_btn_cliente"
+                    android:textSize="9sp"
+                    android:textColor="#ffffff"
+                    android:layout_toRightOf="@+id/escaner_txt_cliente"
+                    android:layout_toEndOf="@+id/escaner_txt_cliente" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/escaner_txt_serie"
+                    android:layout_toRightOf="@+id/escaner_btn_cliente"
+                    android:layout_toEndOf="@+id/escaner_btn_cliente"
+                    android:textSize="7sp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_alignTop="@+id/escaner_btn_cliente"
+                    android:gravity="center"
+                    android:textColor="#4cbee8"
+                    android:layout_alignBottom="@+id/escaner_btn_serie" />
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:text="&lt; Serie >"
+                    android:id="@+id/escaner_btn_serie"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:textSize="10sp"
+                    android:textColor="#ffffff"
+                    android:layout_toRightOf="@+id/escaner_txt_serie"
+                    android:layout_toEndOf="@+id/escaner_txt_serie" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/escaner_txt_agente"
+                    android:layout_alignBottom="@+id/escaner_btn_agente"
+                    android:layout_toLeftOf="@+id/escaner_btn_agente"
+                    android:layout_toStartOf="@+id/escaner_btn_agente"
+                    android:textSize="7sp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="#4cbee8"
+                    android:layout_alignTop="@+id/escaner_btn_agente" />
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:text="&lt; Agente >"
+                    android:id="@+id/escaner_btn_agente"
+                    android:textSize="9sp"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/escaner_btn_serie"
+                    android:layout_toRightOf="@+id/escaner_txt_serie"
+                    android:layout_toEndOf="@+id/escaner_txt_serie" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/escaner_etx_fpago"
+                    android:text="EFECTIVO"
+                    android:textSize="10sp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_alignBottom="@+id/escaner_btn_fpago"
+                    android:layout_toLeftOf="@+id/escaner_btn_fpago"
+                    android:layout_toStartOf="@+id/escaner_btn_fpago"
+                    android:layout_alignTop="@+id/escaner_btn_fpago" />
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:text="&lt; F Pago >"
+                    android:id="@+id/escaner_btn_fpago"
+                    android:textSize="10sp"
+                    android:textColor="#ffffff"
+                    style="@style/DefaultButtonText2"
+                    android:background="@drawable/button_style4"
+                    android:layout_below="@+id/escaner_btn_cliente"
+                    android:layout_toLeftOf="@+id/escaner_txt_agente"
+                    android:layout_toStartOf="@+id/escaner_txt_agente" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollview_prueba2"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent"
+            android:scrollbarStyle="outsideInset"
+            android:fillViewport="true"
+            android:layout_below="@+id/tableLayout3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/tabla_totales">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalview_prueba2"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dip">
+
+
+                <TableLayout
+                    android:id="@+id/tabla_codigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantidad"
+                            style="@style/TableHeader"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descripcion"
+                            style="@style/TableHeader"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Precio"
+                            style="@style/TableHeader"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Desc"
+                            style="@style/TableHeader"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            style="@style/TableHeader"
+                            />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tabla_totales"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_above="@+id/tableLayout"
+            android:layout_marginBottom="5dp">
+
+
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal"
+                    android:id="@+id/textView7"
+                    style="@style/TableHeader"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/et_subtotal"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#ffffff" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Impuestos"
+                    style="@style/TableHeader"
+                    android:id="@+id/textView9"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/et_impuestos"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#ffffff" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:id="@+id/textView11"
+                    style="@style/TableHeader"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:id="@+id/et_total"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView51"
+                    android:text="Fecha"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/escaner_fecha"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp"
+                    android:layout_column="0"
+                    android:text=" " />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Folio "
+                    android:id="@+id/textView14"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_column="0" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12345"
+                    android:id="@+id/escaner_folio"
+                    android:visibility="visible"
+                    android:textColor="#ffffff"
+                    android:layout_column="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Total"
+                    android:id="@+id/textView15"
+                    android:textColor="#ffffff"
+                    android:layout_column="0" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_marginRight="5dp"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0.0"
+                    android:id="@+id/escaner_total"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:id="@+id/escaner_txt_no_art"
+                    android:textColor="#ffffff"
+                    android:layout_column="0"
+                    android:layout_gravity="right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" Articulos"
+                    android:id="@+id/textView18"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:layout_column="0"
+                    android:layout_gravity="bottom" />
+            </TableRow>
+
+        </TableLayout>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="#80464646">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultButtonText2"
+                    android:clickable="true"
+                    android:id="@+id/escaner_btn_grabar">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:text="Grabar"
+                        style="@style/DefaultButtonText2"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:src="@drawable/save_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Guardar"
+                        android:id="@+id/textView68"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultButtonText2"
+                    android:clickable="true"
+                    android:id="@+id/escaner_btn_salir">
+
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="Salir"
+                        style="@style/DefaultButtonText2"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:src="@drawable/cancel_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Cancelar"
+                        android:id="@+id/textView69"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultButtonText2"
+                    android:clickable="true"
+                    android:id="@+id/escaner_btn_limp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="Limpiar"
+                        style="@style/DefaultButtonText2"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:src="@drawable/clean_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Limpiar"
+                        android:id="@+id/textView70"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultButtonText2"
+                    android:clickable="true"
+                    android:id="@+id/escaner_btn_articulo">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="Articulo"
+                        android:src="@drawable/find_image"
+                        style="@style/DefaultButtonText2"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Buscar"
+                        android:id="@+id/textView67"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

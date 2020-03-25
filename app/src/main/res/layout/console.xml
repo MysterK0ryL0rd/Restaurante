@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+    
+
+
+
+    <Button
+ 		android:layout_alignParentTop="true"
+         android:id="@+id/ButtonCharacterDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Char Demo" />
+
+    <Button
+        android:id="@+id/ButtonCodeDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ButtonCharacterDemo"
+        android:layout_below="@+id/ButtonCharacterDemo"
+        android:text="Code Demo" />
+
+    <Button
+        android:id="@+id/ButtonImageDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ButtonCodeDemo"
+        android:layout_below="@+id/ButtonCodeDemo"
+        android:text="Image Demo" />
+    
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ButtonCodeDemo"
+        android:layout_below="@+id/ButtonImageDemo"
+        android:text="quit" />
+    
+<TextView
+    android:id="@+id/TextViewSerialRx"
+    android:layout_width="wrap_content"
+    android:layout_height="88dp"
+    android:layout_alignLeft="@+id/ButtonCharacterDemo"
+    android:layout_alignRight="@+id/ButtonImageDemo"
+    android:layout_below="@+id/quit"
+    android:ems="10" />
+
+</RelativeLayout>

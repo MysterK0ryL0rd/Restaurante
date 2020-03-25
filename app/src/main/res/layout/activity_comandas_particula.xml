@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282828">
+
+    <include android:id="@+id/app_bar" layout="@layout/main_layout" android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<ScrollView
+        android:id="@+id/scrollview_prueba1"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <!--   <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Atras"
+            android:id="@+id/guardar_pedido"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />-->
+
+        <ScrollView
+            android:id="@+id/scrollview_prueba2"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="fill_parent"
+            android:scrollbarStyle="insideInset"
+            android:fillViewport="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/tabla_totales"
+            android:background="#282828"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/guardar_pedido">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalview_prueba2"
+                android:layout_height="fill_parent"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="fill_parent">
+
+
+                <TableLayout
+                    android:id="@+id/tabla_codigos"
+                    android:layout_height="wrap_content" android:layout_width="fill_parent"
+                    android:stretchColumns="0,1,2,3,4">
+
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3D6AB3">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:text="Cantidad"
+                            style="@style/TableHeader3"
+                            />
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Descripcion"
+                            style="@style/TableHeader3"
+                            />
+
+                        <TextView
+                            android:layout_column="2"
+                            android:text="Precio"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="3"
+                            android:text="Descuento"
+                            style="@style/TableHeader3"
+                            />
+
+
+                        <TextView
+                            android:layout_column="4"
+                            android:text="Total"
+                            style="@style/TableHeader3"
+                            />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+        <TableLayout
+            android:id="@+id/tabla_totales"
+            android:layout_height="wrap_content" android:layout_width="match_parent"
+            android:stretchColumns="0,1"
+            android:background="#FF282828"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_column="0"
+                android:text="Subtotal"
+                android:id="@+id/textView11"
+                android:layout_below="@+id/boton_articulos"
+                android:layout_alignRight="@+id/serie"
+                android:layout_alignEnd="@+id/serie"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_column="1"
+                android:text="0.0"
+                android:id="@+id/et_subtotal"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/boton_articulos"
+                android:layout_alignRight="@+id/serie"
+                android:layout_alignEnd="@+id/serie"
+                android:textColor="#77CB00"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="20sp" />
+
+
+        </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_column="0"
+                    android:text="Impuestos"
+                    android:id="@+id/textView88"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="0.0"
+                    android:id="@+id/et_impuestos"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#77CB00"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_column="0"
+                    android:text="  Total"
+                    android:id="@+id/textView139"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="0.0"
+                    android:id="@+id/et_total"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/boton_articulos"
+                    android:layout_alignRight="@+id/serie"
+                    android:layout_alignEnd="@+id/serie"
+                    android:textColor="#77CB00"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+    <!--</ScrollView>-->
+
+
+</LinearLayout>
