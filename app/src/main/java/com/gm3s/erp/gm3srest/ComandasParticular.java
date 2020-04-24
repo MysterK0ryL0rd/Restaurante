@@ -1,5 +1,6 @@
 package com.gm3s.erp.gm3srest;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -33,6 +34,7 @@ import com.gm3s.erp.gm3srest.Model.Articulo;
 import com.gm3s.erp.gm3srest.Model.PersistentCookieStore;
 import com.gm3s.erp.gm3srest.Model.SharedPreference;
 import com.gm3s.erp.gm3srest.Service.Helper;
+import com.gm3s.erp.gm3srest.View.Escaner;
 import com.gm3s.erp.gm3srest.View.LogIn;
 
 import org.apache.http.HttpResponse;
@@ -130,7 +132,7 @@ public class ComandasParticular  extends AppCompatActivity {
     Integer laMoneda = 0;
     Button guardar;
     String idDocumento, idMesa, idComensal;
-    Double total_double = 0.0;
+    Double total_double = 0.0;//0.0 ORIGEN
 
     Map<String, String> info = new HashMap<>();
     List<Map<String, String>> orden = new ArrayList<>();
@@ -295,6 +297,7 @@ public class ComandasParticular  extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void crearTablaArticulos() {//esta si
 
         for (int j = 0; j < orden.size(); j++) {
@@ -338,7 +341,7 @@ public class ComandasParticular  extends AppCompatActivity {
             c2_1.setTextColor(Color.parseColor("#3D6AB3"));
             c2_1.setTypeface(null, Typeface.BOLD);
 
-            System.out.println(" 2 Total: " + total_double);
+            System.out.println(" 2 Total: " + Helper.formatDouble(total_double));
             tr.addView(c00);
             tr.addView(c5);
 
@@ -362,7 +365,7 @@ public class ComandasParticular  extends AppCompatActivity {
 
             TextView total1 = new TextView(this);
             total1.setTextColor(Color.parseColor("#FFFFFF"));
-            total1.setText(total_temp.toString());
+            total1.setText(Helper.formatBigDec(total_temp).toString());
             total1.setGravity(Gravity.RIGHT);
             tr1.addView(total1);
             codigos.addView(tr1, 1); //unica
@@ -456,8 +459,10 @@ public class ComandasParticular  extends AppCompatActivity {
     }
 
 
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void convertirDatos(String cadena) {
         ObjectMapper mapper = new ObjectMapper();
+        Double impuesto = 0.0;
         try {
 
             List<List<Object>> arrayData1 = mapper.readValue(cadena, List.class);
@@ -499,7 +504,7 @@ public class ComandasParticular  extends AppCompatActivity {
 
 
                     System.out.println(" 1 Total: " + total_double);
-                    total_double= total_double + Double.parseDouble(total.toString());
+                    total_double= Helper.formatDouble(total_double) + Double.parseDouble(total.toString());
 
                 //    total_double=total_double*1.16;
                     tr.addView(c1);
@@ -523,10 +528,18 @@ public class ComandasParticular  extends AppCompatActivity {
                     codigos.addView(tr);
                 }
             }
-            System.out.println(" 3 Total: " + total_double);
-            setText(subtotal, total_double.toString());
-            setText(impuestos, String.valueOf(total_double*0.16));
-            setText(total, String.valueOf(total_double+(total_double*0.16)));
+           /* System.out.println(" 3 Total: " + Helper.formatDouble(total_double));
+            setText(subtotal, Helper.formatDouble(total_double).toString());
+            setText(impuestos, String.valueOf(Helper.formatDouble(total_double)*0.16));
+            setText(total, String.valueOf(Helper.formatDouble(total_double)+(Helper.formatDouble(total_double)*0.16)));*/
+            System.out.println(" 3 Total: " + Helper.formatDouble(total_double));
+            setText(subtotal, Helper.formatDouble(total_double).toString());
+            setText(impuestos, String.format( "%.2f",Helper.formatDouble(total_double) * .16));
+            setText(total, String.format( "%.2f",Helper.formatDouble(total_double)+(Helper.formatDouble(total_double))*.16));
+            //totales.add(" $ " + Helper.formatDouble(total_tmp));
+            //        totales.add(" $ "+Helper.formatDouble(total_tmp * (Helper.formatDouble(impuesto)/100)));
+            //        totales.add(" $ " + Helper.formatDouble(total_tmp +  (Helper.formatDouble(total_tmp) * (Helper.formatDouble(impuesto)/100))));;
+            //        total_tmp = Helper.formatDouble(total_tmp) +  (Helper.formatDouble(total_tmp) * (Helper.formatDouble(impuesto)/100));
 
 
         } catch (JsonParseException e1) {
@@ -539,6 +552,7 @@ public class ComandasParticular  extends AppCompatActivity {
 
 
     }
+
 
 
     private class HttpAsyncTask8 extends AsyncTask<String, Void, String> {

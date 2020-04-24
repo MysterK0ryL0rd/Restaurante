@@ -183,8 +183,8 @@ public class Helper {
 
 
     public static BigDecimal formatBigDec(BigDecimal number){
-        return  number.setScale(2, RoundingMode.HALF_DOWN);
-      //  return new BigDecimal(number.toString()).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        return  number.setScale(2, RoundingMode.HALF_UP);
+        //return new BigDecimal(number.toString()).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
     public static byte[] concatBytes(byte[] a, byte[] b) {

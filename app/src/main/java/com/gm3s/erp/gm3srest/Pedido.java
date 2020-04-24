@@ -3127,8 +3127,8 @@ public class Pedido extends AppCompatActivity {
                 Double total_tmp = 0.0;
                 Integer tmp_int = (Integer) productos_list_tmp.get(i).get("cantidad");
                 total_tmp = Double.parseDouble(tmp_int.toString());
-                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * total_tmp;
-                total_tmp = total_tmp * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
+                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * Helper.formatDouble(total_tmp);
+                total_tmp = Helper.formatDouble(total_tmp) * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
                 c2_1.setText(Helper.formatDouble(total_tmp).toString());
                 c2_1.setTextSize(25);
                 c2_1.setTextColor(Color.parseColor("#3D6AB3"));
