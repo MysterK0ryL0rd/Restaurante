@@ -849,13 +849,13 @@ public class Escaner extends AppCompatActivity {
                                         Double aux3 = Double.parseDouble(c2_1.getText().toString());
                                         cantidad_tmp = aux3 / Double.parseDouble(c6.getText().toString());
                                         Double total_double = (Double.parseDouble(c00.getText().toString()) * Double.parseDouble(c6.getText().toString())); //cantidad por articulo
-                                        Double total_double2 = Double.parseDouble(subtotal.getText().toString()) - (Double.parseDouble(c2_1.getText().toString())) + total_double; //subtotal
-                                        Double total_double3 = (-(Double.parseDouble(c2_1.getText().toString())) * (art.getImpuesto() / 100)) + (total_double * (art.getImpuesto() / 100));
-                                        setText(impuestos, String.valueOf(Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) + total_double3)));
+                                        Double total_double2 = Double.parseDouble(subtotal.getText().toString()) - (Double.parseDouble(c2_1.getText().toString())) + Helper.formatDouble(total_double);; //subtotal
+                                        Double total_double3 = (-(Double.parseDouble(c2_1.getText().toString())) * (art.getImpuesto() / 100)) + (Helper.formatDouble(total_double) * (art.getImpuesto() / 100));
+                                        setText(impuestos, String.valueOf(Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) + Helper.formatDouble(total_double3))));
                                         setText(c2_1, Helper.formatDouble(total_double).toString());
                                         setText(subtotal, Helper.formatDouble(total_double2).toString());
-                                        setText(total, String.valueOf(Helper.formatDouble((Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (total_double * ((art.getImpuesto() / 100) + 1))))));
-                                        setText(escaner_total, String.valueOf((Helper.formatDouble(Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (total_double * ((art.getImpuesto() / 100) + 1))))));
+                                        setText(total, String.valueOf(Helper.formatDouble((Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (Helper.formatDouble(total_double) * ((art.getImpuesto() / 100) + 1))))));
+                                        setText(escaner_total, String.valueOf((Helper.formatDouble(Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (Helper.formatDouble(total_double) * ((art.getImpuesto() / 100) + 1))))));
                                         cantidad_articulos = cantidad_articulos + Integer.parseInt(c00.getText().toString()) - Integer.valueOf(cantidad_tmp.intValue());
                                         setText(escaner_txt_no_art, String.valueOf(cantidad_articulos));
 
@@ -1601,7 +1601,7 @@ public class Escaner extends AppCompatActivity {
                         for (int j = 0; j < etx_array_formas.size(); j++) {
                             if ((etx_array_formas.get(j).isEnabled() == false) || (etx_array_formas.get(j).getText().toString().equals("")) || (check_array_formas.get(j).isChecked()== false)) {
                             } else {
-                                temporal_resta = temporal_resta.add(new BigDecimal(etx_array_formas.get(j).getText().toString()));
+                                temporal_resta = Helper.formatBigDec(temporal_resta).add(new BigDecimal(etx_array_formas.get(j).getText().toString()));
                             }
                         }
 
@@ -1686,7 +1686,7 @@ public class Escaner extends AppCompatActivity {
                 }
 
 
-                if(!total_temp.toString().equals(total.getText().toString())){
+                if(!Helper.formatBigDec(total_temp).equals(total.getText().toString())){
                 Toast.makeText(getApplicationContext(), "Favor de verificar los totales", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -1707,6 +1707,7 @@ public class Escaner extends AppCompatActivity {
         // Display the custom alert dialog on interface
         dialog.show();
     }
+
 
 
     private void build_popup() {
@@ -2978,8 +2979,8 @@ public class Escaner extends AppCompatActivity {
                 Double total_tmp = 0.0;
                 Integer tmp_int = (Integer) productos_list_tmp.get(i).get("cantidad");
                 total_tmp = Double.parseDouble(tmp_int.toString());
-                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * total_tmp;
-                total_tmp = total_tmp * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
+                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * Helper.formatDouble(total_tmp);
+                total_tmp = Helper.formatDouble(total_tmp) * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
                 c2_1.setText(Helper.formatDouble(total_tmp).toString());
                 c2_1.setGravity(Gravity.RIGHT);
 

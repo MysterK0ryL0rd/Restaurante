@@ -1,5 +1,6 @@
 package com.gm3s.erp.gm3srest;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -81,7 +82,7 @@ public class ComandasGeneral extends AppCompatActivity {
     Map<Integer,Articulo> mapa_articulos = new HashMap<>();
     static Double total_tmp=0.0;
     TextView total;
-    Double impuesto = 0.0;
+    static Double impuesto = 0.0;
     boolean esCaja=false;
 
     private static boolean validacion;
@@ -110,6 +111,7 @@ public class ComandasGeneral extends AppCompatActivity {
     static String categoria_busqueda= "nombreCorto";
     boolean formas_estado = false;
     static BigDecimal temporal_resta = new BigDecimal(0.0);
+    //Double temporal_resta = 0.0;
     List<Boolean> formas_check =  new ArrayList<Boolean>();
     List<String>  formas_et = new ArrayList<String>();
     static BigDecimal total_temp = new BigDecimal(0.0);
@@ -489,7 +491,7 @@ public class ComandasGeneral extends AppCompatActivity {
             c2_1.setTextSize(15);
            // c2_1.setTextColor(Color.parseColor("#3D6AB3"));
           //  c2_1.setTypeface(null, Typeface.BOLD);
-            total_tmp= total_tmp + Double.parseDouble(art.get("total").toString());
+            total_tmp= Helper.formatDouble(total_tmp) + Double.parseDouble(art.get("total"));
 
 
 
@@ -519,15 +521,15 @@ public class ComandasGeneral extends AppCompatActivity {
 
                 }
             }*/
-            System.out.println(" ----------------------- AGREGANDO ---------------------------------------- " + impuesto);
+            System.out.println(" ----------------------- AGREGANDO ---------------------------------------- " + Helper.formatDouble(impuesto));
             codigos.addView(tr, j+1); //unica
         }
 
         List<String> totales = new ArrayList<>();
-        totales.add(" $ " + total_tmp.toString());
-        totales.add(Double.toString(total_tmp * (impuesto/100)));
-        totales.add(" $ " + (total_tmp +  (total_tmp * (impuesto/100))));;
-        total_tmp = total_tmp +  (total_tmp * (impuesto/100));
+        totales.add(" $ " + Helper.formatDouble(total_tmp));
+        totales.add(" $ "+Helper.formatDouble(total_tmp * (Helper.formatDouble(impuesto)/100)));
+        totales.add(" $ " + Helper.formatDouble(total_tmp +  (Helper.formatDouble(total_tmp) * (Helper.formatDouble(impuesto)/100))));;
+        total_tmp = Helper.formatDouble(total_tmp) +  (Helper.formatDouble(total_tmp) * (Helper.formatDouble(impuesto)/100));
 
         for(int i=0; i<3; i++) {
             TableRow tra = new TableRow(this);
@@ -804,7 +806,7 @@ public class ComandasGeneral extends AppCompatActivity {
 
     public static String POST3(String url) {
            if(formasPago_tmp.size()==1){
-            formasPago_tmp.get(0).put("valor", total_tmp.toString());
+            formasPago_tmp.get(0).put("valor", Helper.formatDouble(total_tmp).toString());
         }
 
         HashMap map3 = new HashMap();
@@ -975,7 +977,7 @@ public class ComandasGeneral extends AppCompatActivity {
 
 
             if(formasPago_tmp.size()==1){
-                formasPago_tmp.get(0).put("valor", total_tmp.toString());
+                formasPago_tmp.get(0).put("valor", Helper.formatDouble(total_tmp).toString());
             }
             ObjectMapper mapper = new ObjectMapper();
             Map totalisimo  = mapper.readValue(informacion.toString(), HashMap.class);
@@ -1116,6 +1118,7 @@ public class ComandasGeneral extends AppCompatActivity {
         return result;
     }
 
+    @SuppressLint("SetTextI18n")
     public void alertReferencias() {
         AlertDialog.Builder builder = new AlertDialog.Builder(ComandasGeneral.this);
 
@@ -1127,7 +1130,7 @@ public class ComandasGeneral extends AppCompatActivity {
         final TableLayout tabla_credito = (TableLayout) dialogView.findViewById(R.id.tabla_credito);
 
         final TextView total_tv = (TextView) dialogView.findViewById(R.id.total_textView);
-        total_tv.setText(total_tmp.toString());
+        total_tv.setText(Helper.formatDouble(total_tmp).toString());
 
         final ArrayList < CheckBox > check_array_formas2 = new ArrayList < > ();
         final ArrayList < EditText > etx_array_formas2 = new ArrayList < > ();
@@ -1153,7 +1156,7 @@ public class ComandasGeneral extends AppCompatActivity {
             tr.addView(c00);
             tr.addView(c51);
             if (formasPago.get(i).get("nombre").toString().toLowerCase().equals("efectivo")) {
-                c51.setText(total_tmp.toString());
+                c51.setText(Helper.formatDouble(total_tmp).toString());
                 c00.setChecked(true);
             }
             if (formasPago.get(i).get("credito")!=null && formasPago.get(i).get("credito").toString().equals("true")) {
@@ -1162,6 +1165,7 @@ public class ComandasGeneral extends AppCompatActivity {
                 tabla_efectivo.addView(tr);
             }
         }
+            //temporal_resta =
         temporal_resta = BigDecimal.valueOf(0.0);
         for (int i = 0; i < check_array_formas2.size(); i++) {
             final int aux = i;
@@ -1171,13 +1175,13 @@ public class ComandasGeneral extends AppCompatActivity {
                     if (isChecked) {
                         temporal_resta = BigDecimal.valueOf(0.0);
                         for (int j = 0; j < etx_array_formas2.size(); j++) {
-                            if ((etx_array_formas2.get(j).isEnabled() == false) || (etx_array_formas2.get(j).getText().toString().equals("")) || (check_array_formas2.get(j).isChecked() == false)) {} else {
+                            if ((!etx_array_formas2.get(j).isEnabled()) || (etx_array_formas2.get(j).getText().toString().equals("")) || (!check_array_formas2.get(j).isChecked())) {} else {
                                 temporal_resta = temporal_resta.add(new BigDecimal(etx_array_formas2.get(j).getText().toString()));
                             }
                         }
-                        Toast.makeText(getApplicationContext(), " Temporal Resta" + temporal_resta, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), " Temporal Resta " + Helper.formatBigDec(temporal_resta), Toast.LENGTH_SHORT).show();
 
-                        etx_array_formas2.get(aux).setText(String.valueOf((new BigDecimal(total_tmp.toString())).subtract(temporal_resta)));
+                        etx_array_formas2.get(aux).setText(String.valueOf((new BigDecimal(Helper.formatDouble(total_tmp).toString())).subtract(Helper.formatBigDec(temporal_resta))));
                         etx_array_formas2.get(aux).setEnabled(true);
                         // etx_array_formas2.get(aux).setFocusable(true);
                         etx_array_formas2.get(aux).setClickable(true);
@@ -1228,18 +1232,19 @@ public class ComandasGeneral extends AppCompatActivity {
                                 formasPago_tmp.add(tmp);
 
                                 System.out.println("CheckBox " + "Valor: " + etx_array_formas2.get(i).getText().toString());
-                                total_temp = total_temp.add(new BigDecimal(etx_array_formas2.get(i).getText().toString()));
+                                total_temp = Helper.formatBigDec(total_temp).add(new BigDecimal(etx_array_formas2.get(i).getText().toString()));
                             }
                         }
                     }
                 }
-                if (total_temp.toString().equals(total_tmp.toString())) {
+                if (verificarCoincidenciaPrecios()) {
                     formas_estado = true;
                     dialog.cancel();
                 } else {
-                    System.out.println("      ----> " + total_temp + "   ----> " + total_tmp.toString());
+                    System.out.println("      ----> " + Helper.formatBigDec(total_temp) + "   ----> " + Helper.formatDouble(total_tmp).toString());
                     Toast.makeText(getApplicationContext(), "Favor de verificar los totales", Toast.LENGTH_SHORT).show();
                 }
+
 
                 if(esCaja){
                 HttpAsyncTask9 asynk = new HttpAsyncTask9();
@@ -1261,6 +1266,14 @@ public class ComandasGeneral extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+    @SuppressLint("DefaultLocale")
+    public boolean verificarCoincidenciaPrecios() {
+        boolean validar = false;
+        total_tmp = Double.valueOf(String.format( "%.2f", Helper.formatDouble(total_tmp)));
+        if (Helper.formatBigDec(total_temp).toString().equals(Helper.formatDouble(total_tmp).toString()))
+            validar = true;
+        return validar;
     }
 
 

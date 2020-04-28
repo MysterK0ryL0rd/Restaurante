@@ -466,6 +466,7 @@ public class MenuArticulosLineas3 extends Fragment {
                     c7.setGravity(Gravity.CENTER);
 
 
+
                     if(Integer.parseInt(lista_art_temporales.get(x).get("fecha"))>300){
                         c6.setTextColor(Color.RED);
                         c7.setTextColor(Color.RED);

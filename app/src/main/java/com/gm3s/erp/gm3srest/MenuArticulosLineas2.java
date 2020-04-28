@@ -1,6 +1,7 @@
 package com.gm3s.erp.gm3srest;
 
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
@@ -624,29 +625,41 @@ public class MenuArticulosLineas2 extends Fragment {
                 builder.setView(dialogView);
                 final AlertDialog dialog = builder.create();
 
-                Button busclie_btn_aceptar = (Button) dialogView.findViewById(R.id.btn_test);
+                final Button busclie_btn_aceptar = (Button) dialogView.findViewById(R.id.btn_test);
                 final EditText busclie_etx_nom = (EditText) dialogView.findViewById(R.id.edit_test);
 
                 busclie_btn_aceptar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString()) + 1));
+                        c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString())/* + 1*/));
                         lista_art_temporales.get(x).setCantidad(Integer.parseInt(c8.getText().toString()));
                         if (mapa_articulos.containsKey(lista_art_temporales.get(x).getId())) {
 
-                        } else {
+                        } /*else {
                             counter++;
-                        }
+                        }*/
                         lista_art_temporales.get(x).setCounter(counter);
                         lista_art_temporales.get(x).setReferencia(busclie_etx_nom.getText().toString());
                         mapa_articulos.put(lista_art_temporales.get(x).getId(), lista_art_temporales.get(x));
                         //    listaArticulos.put(lista_art_temporales.get(x).getNombre(),lista_art_temporales.get(x));
 
 
-                        contador_int = contador_int + 1;
-                        contador.setText(contador_int.toString());
+                        ///contador_int = contador_int + 1;
+                        ///contador.setText(contador_int.toString());
+                        //alertReferenciaGlobal(x);
                         dialog.cancel();
+
+                        Intent i = new Intent(getActivity().getApplicationContext(), PedidosPendientes.class);
+                        Bundle b = new Bundle();
+                        b.putString("refextra",busclie_etx_nom.getText().toString());
+                        i.putExtras(b);
+                        
+
+
+                        
+
+
 
 
                     }

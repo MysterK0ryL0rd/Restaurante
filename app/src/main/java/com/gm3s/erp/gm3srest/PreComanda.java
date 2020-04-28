@@ -1,5 +1,6 @@
 package com.gm3s.erp.gm3srest;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -319,6 +320,7 @@ public class PreComanda extends AppCompatActivity {
             scale=Float.parseFloat("1.8");
         //  Toast.makeText(getApplicationContext(), String.valueOf(scale), Toast.LENGTH_LONG).show();
         layout2.setLayoutParams(new LinearLayout.LayoutParams(Math.round(180 * scale), Math.round(200 * scale))); //500 500 cel
+
         layout2.setOrientation(LinearLayout.VERTICAL);
         layout2.setBackgroundColor(Color.parseColor(colors[x % 6]));
         layout2.setBackgroundResource(resources[x % 6]);
@@ -488,6 +490,7 @@ public class PreComanda extends AppCompatActivity {
         return result;
     }
 
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
     public void convertirDatos3(String cadena) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -501,29 +504,18 @@ public class PreComanda extends AppCompatActivity {
 
                     System.out.println("for 2: "+ arrayData1.get(i).get(j).toString());
 
-                    List<Object> infopartidas = (List) arrayData1.get(i).get(j);
+                    List infopartidas = (List) arrayData1.get(i).get(j);
+                    //List<Object> infopartidas = (List) arrayData1.get(i).get(j);
                     Double total =(Double)((ArrayList) infopartidas.get(3)).get(1);
+                    //+ Double.parseDouble(Helper.formatDouble(total).toString())
 
-
-
-
-
-
-                    total_double= total_double + Double.parseDouble(total.toString());
-
-                    total_double=total_double*1.16;
-
-
-
-
-
-
-
+                    total_double= Double.valueOf(String.format("%.2f",Helper.formatDouble(total_double) + Double.parseDouble(String.valueOf(total))));
+                    total_double= Double.valueOf(String.format("%.2f", Helper.formatDouble(total_double*1.16)));
                 }
             }
-            totalTextView=totalTextView+total_double;
-            System.out.println(" 3 Total: " + total_double);
-            total_tmp= "$ " + String.format("%.2f", total_double);
+            totalTextView=totalTextView+Helper.formatDouble(total_double);
+            System.out.println(" 3 Total: " + Helper.formatDouble(total_double));
+            total_tmp= "$ " + Helper.formatDouble(total_double);
             totales.add(total_tmp);
             System.out.println("aux " + aux +"comensales " +comensales);
 

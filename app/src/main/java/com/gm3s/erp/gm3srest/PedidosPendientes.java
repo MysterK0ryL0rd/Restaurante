@@ -1,5 +1,6 @@
 package com.gm3s.erp.gm3srest;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -355,6 +356,7 @@ public class PedidosPendientes extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void crearTablaArticulos2() {
         String[] colors1 = {"#41d9aa", "#496c8c","#7BDC6F"};
         int[] resources = {R.drawable.tabla_azul, R.drawable.tabla_verdel,R.drawable.tabla_verde2};
@@ -396,17 +398,36 @@ public class PedidosPendientes extends AppCompatActivity {
                 c7.setTypeface(null, Typeface.BOLD);
                 c7.setGravity(Gravity.CENTER);
 
+                TextView c8 = new TextView(getApplicationContext());
+                Bundle b = this.getIntent().getExtras();
+
+                assert b != null;
+                //String refextra = b.getString("refextra");
+                String refextra = getIntent().getStringExtra("refextra");
+                    c8.setText("Referencia Extra " + refextra);
+                    c8.setTextColor(Color.parseColor(colors1[x % 2]));
+                    c8.setTextSize(20);
+                    c8.setTypeface(null, Typeface.BOLD);
+                    c8.setGravity(Gravity.CENTER);
+
+
+                // recibirDatos();
+
 
                 if(Integer.parseInt(lista_art_temporales.get(x).get("fecha"))>300){
                     c6.setTextColor(Color.RED);
                     c7.setTextColor(Color.RED);
+                    c8.setTextColor(Color.RED);
                 }
 
                 layout2.addView(c6);
                 layout2.addView(c7);
+                layout2.addView(c8);
                 layout0.addView(layout2);
 
                 prices.addView(layout0);
+
+
             }
 
 
@@ -427,6 +448,19 @@ public class PedidosPendientes extends AppCompatActivity {
                 DELAY1
         );
     }
+
+    /*public void recibirDatos (){
+        Bundle extras =getIntent().getExtras();
+        String ref = extras.getString("refextra");
+        TextView c8 = new TextView(getApplicationContext());
+        String refextra = getIntent().getStringExtra("refextra");
+        c8.setText(refextra);
+        *//*c8.setTextColor(Color.parseColor(colors1[x % 2]));*//*
+        c8.setTextSize(20);
+        c8.setTypeface(null, Typeface.BOLD);
+        c8.setGravity(Gravity.CENTER);
+
+    }*/
 
     public LinearLayout crearElemento(String[] colors, final int x, int[] resources) {
         LinearLayout layout2 = new LinearLayout(getApplicationContext());
