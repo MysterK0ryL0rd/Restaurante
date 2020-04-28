@@ -725,12 +725,12 @@ public class Comanda extends AppCompatActivity {
                                             Double tem_total = Double.parseDouble(c2_1.getText().toString());
                                             Double aux31 = Double.parseDouble(c00.getText().toString()) * ((Double.parseDouble(c6.getText().toString()) * ((100 - Double.parseDouble(c51.getText().toString())) / 100)));
                                             setText(c2_1, Helper.formatDouble(aux31).toString());
-                                            Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString()) - tem_total + aux31));
-                                            setText(subtotal, String.valueOf(subtotal_double));
-                                            info.put("subtotal", String.valueOf(subtotal_double));
+                                            Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString()) - Helper.formatDouble(tem_total) + Helper.formatDouble(aux31)));
+                                            setText(subtotal, String.valueOf(Helper.formatDouble(subtotal_double)));
+                                            info.put("subtotal", String.valueOf(Helper.formatDouble(subtotal_double)));
 
-                                            Double impuesto_double = Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) - (tem_total * ((art.getImpuesto()) / 100)) + (aux31 * ((art.getImpuesto()) / 100)));
-                                            setText(impuestos, String.valueOf(impuesto_double));
+                                            Double impuesto_double = Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) - (Helper.formatDouble(tem_total) * ((art.getImpuesto()) / 100)) + (Helper.formatDouble(aux31) * ((art.getImpuesto()) / 100)));
+                                            setText(impuestos, String.valueOf(Helper.formatDouble(impuesto_double)));
 
                                             setText(total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
                                             //   setText(escaner_total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
@@ -792,12 +792,12 @@ public class Comanda extends AppCompatActivity {
                                             Double aux3 = Double.parseDouble(c00.getText().toString()) * Double.parseDouble(c6.getText().toString()) * ((100 - Double.parseDouble(c51.getText().toString())) / 100);
                                             setText(c2_1, Helper.formatDouble(aux3).toString());
 
-                                            Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString()) - tem_total + aux3));
-                                            setText(subtotal, String.valueOf(subtotal_double));
-                                            info.put("subtotal", String.valueOf(subtotal_double));
+                                            Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString()) - Helper.formatDouble(tem_total) + aux3));
+                                            setText(subtotal, String.valueOf(Helper.formatDouble(subtotal_double)));
+                                            info.put("subtotal", String.valueOf(Helper.formatDouble(subtotal_double)));
 
                                             Double impuesto_double = Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) - (tem_total * ((art.getImpuesto()) / 100)) + (aux3 * ((art.getImpuesto()) / 100)));
-                                            setText(impuestos, String.valueOf(impuesto_double));
+                                            setText(impuestos, String.valueOf(Helper.formatDouble(impuesto_double)));
 
                                             setText(total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
                                             // setText(escaner_total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
@@ -1563,7 +1563,7 @@ public class Comanda extends AppCompatActivity {
                                 formasPago_tmp.add(tmp);
 
                                 System.out.println("CheckBox " + "Valor: " + etx_array_formas2.get(i).getText().toString());
-                                total_temp = total_temp.add(new BigDecimal(etx_array_formas2.get(i).getText().toString()));
+                                total_temp = Helper.formatBigDec(total_temp).add(new BigDecimal(etx_array_formas2.get(i).getText().toString()));
 
 
                             }
@@ -1578,7 +1578,7 @@ public class Comanda extends AppCompatActivity {
                 }
 
 
-                if(total_temp.toString().equals(total.getText().toString())){
+                if(Helper.formatBigDec(total_temp).toString().equals(total.getText().toString())){
                     formas_estado = true;
                     dialog.cancel();
 
@@ -2954,8 +2954,8 @@ public class Comanda extends AppCompatActivity {
                 Double total_tmp = 0.0;
                 Integer tmp_int = (Integer) productos_list_tmp.get(i).get("cantidad");
                 total_tmp = Double.parseDouble(tmp_int.toString());
-                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * total_tmp;
-                total_tmp = total_tmp * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
+                total_tmp = ((Double)productos_list_tmp.get(i).get("precio")) * Helper.formatDouble(total_tmp);
+                total_tmp = Helper.formatDouble(total_tmp) * (1-((Double)productos_list_tmp.get(i).get("descuento"))/100);
                 c2_1.setText(Helper.formatDouble(total_tmp).toString());
                 c2_1.setTextSize(25);
                 c2_1.setTextColor(Color.parseColor("#3D6AB3"));
@@ -2999,15 +2999,15 @@ public class Comanda extends AppCompatActivity {
                                             cantidad_tmp = aux3 / Double.parseDouble(c51.getText().toString());
                                             Double total_double = (Double.parseDouble(c00.getText().toString()) * Double.parseDouble(c51.getText().toString())); //cantidad por articulo
 
-                                            Double total_double2 = Double.parseDouble(subtotal.getText().toString()) - (Double.parseDouble(c51.getText().toString())) + total_double; //subtotal
-                                            Double total_double3 = (-(Double.parseDouble(c51.getText().toString())) * (art.getImpuesto() / 100)) + (total_double * (art.getImpuesto() / 100));
+                                            Double total_double2 = Double.parseDouble(subtotal.getText().toString()) - (Double.parseDouble(c51.getText().toString())) + Helper.formatDouble(total_double); //subtotal
+                                            Double total_double3 = (-(Double.parseDouble(c51.getText().toString())) * (art.getImpuesto() / 100)) + (Helper.formatDouble(total_double) * (art.getImpuesto() / 100));
 
-                                            System.out.println("Datos: " + "    cantidad_tmp " + cantidad_tmp + " aux3 " + aux3 + "      total_double " + total_double + "     total_double2 " + total_double2 + "       total_double3 " + total_double3);
+                                            System.out.println("Datos: " + "    cantidad_tmp " + cantidad_tmp + " aux3 " + aux3 + "      total_double " + Helper.formatDouble(total_double) + "     total_double2 " + Helper.formatDouble(total_double2) + "       total_double3 " + Helper.formatDouble(total_double3));
 
-                                            setText(impuestos, String.valueOf(Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) + total_double3)));
+                                            setText(impuestos, String.valueOf(Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) + Helper.formatDouble(total_double3))));
                                             setText(c2_1, Helper.formatDouble(total_double).toString());
                                             setText(subtotal, Helper.formatDouble(total_double2).toString());
-                                            setText(total, String.valueOf((Helper.formatDouble(Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (total_double * ((art.getImpuesto() / 100) + 1))))));
+                                            setText(total, String.valueOf((Helper.formatDouble(Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (Helper.formatDouble(total_double) * ((art.getImpuesto() / 100) + 1))))));
                                           //  setText(escaner_total, String.valueOf((Helper.formatDouble(Double.parseDouble(total.getText().toString()) - (aux3 * ((art.getImpuesto() / 100) + 1)) + (total_double * ((art.getImpuesto() / 100) + 1))))));
 
                                             System.out.println("prod cantidad_articulos 1:" + cantidad_articulos);
@@ -3077,10 +3077,10 @@ public class Comanda extends AppCompatActivity {
                                                 Double aux31 = Double.parseDouble(c00.getText().toString()) * ((Double.parseDouble(c51.getText().toString()) * ((100 - Double.parseDouble(c6.getText().toString())) / 100)));
                                                 setText(c2_1, Helper.formatDouble(aux31).toString());
                                                 Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString()) - tem_total + aux31));
-                                                setText(subtotal, String.valueOf(subtotal_double));
+                                                setText(subtotal, String.valueOf(Helper.formatDouble(subtotal_double)));
 
                                                 Double impuesto_double = Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) - (tem_total * ((art.getImpuesto()) / 100)) + (aux31 * ((art.getImpuesto()) / 100)));
-                                                setText(impuestos, String.valueOf(impuesto_double));
+                                                setText(impuestos, String.valueOf(Helper.formatDouble(impuesto_double)));
 
                                                 setText(total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
                                          //       setText(escaner_total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
@@ -3151,10 +3151,10 @@ public class Comanda extends AppCompatActivity {
                                                 setText(c2_1, Helper.formatDouble(aux3).toString());
 
                                                 Double subtotal_double = (Helper.formatDouble(Double.parseDouble(subtotal.getText().toString())- tem_total + aux3));
-                                                setText(subtotal,String.valueOf(subtotal_double));
+                                                setText(subtotal,String.valueOf(Helper.formatDouble(subtotal_double)));
 
                                                 Double impuesto_double =  Helper.formatDouble(Double.parseDouble(impuestos.getText().toString()) - (tem_total * ((art.getImpuesto())/100)) + (aux3 * ((art.getImpuesto())/100)));
-                                                setText(impuestos, String.valueOf(impuesto_double));
+                                                setText(impuestos, String.valueOf(Helper.formatDouble(impuesto_double)));
 
                                                 setText(total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));
                                                // setText(escaner_total, String.valueOf((Helper.formatDouble(subtotal_double + impuesto_double))));

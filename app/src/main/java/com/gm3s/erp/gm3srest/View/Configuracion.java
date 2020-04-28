@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Configuracion extends AppCompatActivity {
     private SharedPreference sharedPreference;
-    List<String> servers = Arrays.asList("https://pyme.gm3s-erp.com:6065", "https://oggi.gm3s-erp.com:5050", "http://10.0.2.2:8080", "https://mi2.gm3s-erp.com:6068", "https://alyp.gm3s-erp.com:6070", "https://azul.gm3s-erp.com:3030", "https://diac.gm3s-erp.com:6073", "https://oggi.gm3s-erp.com:5555", "https://tiendas.gm3s-erp.com:8989", "https://ufra.gm3s-erp.com:9590", "https://ufra.gm3s-erp.com:9591", "https://gm3s.gm3s-erp.com:8383","https://ffmm.gm3s-erp.com:5251");
+    List<String> servers = Arrays.asList("https://pyme.gm3s-erp.com:6065", "https://oggi.gm3s-erp.com:5050", /*latitude*/"http://192.168.1.83:8080", "https://mi2.gm3s-erp.com:6068", "https://alyp.gm3s-erp.com:6070", "https://azul.gm3s-erp.com:3030", "https://diac.gm3s-erp.com:6073", "https://oggi.gm3s-erp.com:5555", "https://tiendas.gm3s-erp.com:8989", "https://ufra.gm3s-erp.com:9590", "https://ufra.gm3s-erp.com:9591", "https://gm3s.gm3s-erp.com:8383","https://ffmm.gm3s-erp.com:5251");
     int server = -1;
     private Button s1;
     private Button s2;
@@ -31,6 +31,7 @@ public class Configuracion extends AppCompatActivity {
     private Button s11;
     private Button s12;
     private Button s13;
+    /*"http://192.168.0.3:8080","http://192.168.0.2:8080",*/
 
 
     @Override

@@ -18,13 +18,13 @@
             android:id="@+id/ok_button" />
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/bagicon"
-            android:id="@+id/imageView2"
             android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/contador"
             android:layout_toLeftOf="@+id/contador"
-            android:layout_toStartOf="@+id/contador" />
+            android:src="@drawable/bagicon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,12 +48,13 @@
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/titulo"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginStart="118dp"
+            android:layout_marginEnd="34dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
 
