@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -89,11 +90,12 @@ public class MenuArticulosLineas2 extends Fragment {
     static private String elCliente = "";
     String id = "";
     String referenciaGlobal="";
-    Integer id_tmp;
+    Integer id_tmp =1;
     String laSerieNombre;
     String user="";
     Map<String,Map> listaArticulos = new HashMap<>();
     Double impuesto=0.0;
+    private EditText busclie_etx_nom;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,6 +104,10 @@ public class MenuArticulosLineas2 extends Fragment {
        rootView =  inflater.inflate(R.layout.activity_menu_articulos_lineas, container, false);
 
         return rootView;
+
+
+
+
     }
 
 
@@ -199,7 +205,8 @@ public class MenuArticulosLineas2 extends Fragment {
                     tmp.put("precio", mapa_articulos.get(pair.getKey()).getPrecioBase());
                     tmp.put("total", mapa_articulos.get(pair.getKey()).getPrecioBase()*mapa_articulos.get(pair.getKey()).getCantidad());
                     tmp.put("idC", idComensal);
-                   // tmp.put("extra",mapa_articulos.get(pair.getKey()).getReferencia());
+                    if(mapa_articulos.get(pair.getKey()).getReferencia().length()>0)
+                        tmp.put("extra",mapa_articulos.get(pair.getKey()).getReferencia());
                   //  if(!esCaja)
                        // tmp.put("idC", idComensal + mapa_articulos.get(pair.getKey()).getReferencia() );
                     productos_list.add(tmp);
@@ -247,6 +254,7 @@ public class MenuArticulosLineas2 extends Fragment {
                         a.execute(server + "/medialuna/spring/documento/modificar/app/mesa/" + id_doc);
                     }
                 }
+
 
             }
         });
@@ -650,10 +658,13 @@ public class MenuArticulosLineas2 extends Fragment {
                         //alertReferenciaGlobal(x);
                         dialog.cancel();
 
-                        Intent i = new Intent(getActivity().getApplicationContext(), PedidosPendientes.class);
+
+
+                        /*Intent i = new Intent(getActivity().getApplicationContext(), PedidosPendientes.class);
                         Bundle b = new Bundle();
                         b.putString("refextra",busclie_etx_nom.getText().toString());
-                        i.putExtras(b);
+                        i.putExtras(b);*/
+                        //startActivity(i);
                         
 
 
@@ -1088,9 +1099,11 @@ public class MenuArticulosLineas2 extends Fragment {
 
                 if(productos_list.get(i).containsKey("extra")){
                     System.out.println("Si modifica");
-                    productos_list.get(i).put("idC","C:"+id_tmp+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+" "+referenciaGlobal+ " | "+productos_list.get(i).get("extra").toString());
+
+                    productos_list.get(i).put("idC","C:"+(id_tmp+1)+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+" "+referenciaGlobal+ " | "+productos_list.get(i).get("extra").toString()/*+ "|" + "refextra"+refextra*/);
                 }else{
-                    productos_list.get(i).put("idC","C:"+id_tmp+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+" "+referenciaGlobal);
+
+                    productos_list.get(i).put("idC","C:"+(id_tmp + 1 )+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+" "+referenciaGlobal/*+ "|" + "refextra"+refextra*/);
 
                 }
 

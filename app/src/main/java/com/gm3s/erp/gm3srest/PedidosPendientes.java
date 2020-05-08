@@ -2,6 +2,7 @@ package com.gm3s.erp.gm3srest;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
@@ -21,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gm3s.erp.gm3srest.Model.PersistentCookieStore;
 import com.gm3s.erp.gm3srest.Model.SharedPreference;
 import com.gm3s.erp.gm3srest.Service.Helper;
+import com.gm3s.erp.gm3srest.Util.Constantes;
 import com.gm3s.erp.gm3srest.View.MainActivity;
 
 import org.apache.http.HttpResponse;
@@ -57,6 +59,8 @@ public class PedidosPendientes extends AppCompatActivity {
     Button ok_button;
     Boolean menu_tiempos = false;
 
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -286,39 +290,45 @@ public class PedidosPendientes extends AppCompatActivity {
             for (int i = 0; i < arrayData1.size(); i++) {
                 List<Object> infopartidas = (List) arrayData1.get(i);
                 List<Object> infoMesa = (List) infopartidas.get(1);
-                HashMap<String, String> informacion = new HashMap<>();
-                informacion.put("id_partida", String.valueOf(infoMesa.get(0)));
-                informacion.put("nombre", infoMesa.get(1).toString());
-                informacion.put("referencia", infoMesa.get(2).toString());
-                informacion.put("no_mesa", String.valueOf(infoMesa.get(3)));
-                informacion.put("id_mesa", String.valueOf(infoMesa.get(4)));
+                String estatus = infoMesa.get(2).toString().trim();
+                String[] estatusPartida = estatus.split("\\|");
+                if(!estatusPartida[0].equals("SURTIDA")) {
+                    HashMap<String, String> informacion = new HashMap<>();
+                    informacion.put("id_partida", String.valueOf(infoMesa.get(0)));
+                    informacion.put("nombre", infoMesa.get(1).toString());
+                    informacion.put("referencia", infoMesa.get(2).toString());
+                    informacion.put("no_mesa", String.valueOf(infoMesa.get(3)));
+                    informacion.put("id_mesa", String.valueOf(infoMesa.get(4)));
+                    informacion.put("estatusPartida", estatusPartida[0]);
+                    if(estatusPartida.length > 2)
+                        informacion.put("extra", estatusPartida[2]);
+                    /*informacion.put("referenciax", referenciax[1]);*/
 
-                Integer a = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(0,2))*24*60;
-                Integer b = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(2, 4))*60;
-                Integer c = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(4, 6));
+                    Integer a = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(0, 2)) * 24 * 60;
+                    Integer b = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(2, 4)) * 60;
+                    Integer c = Integer.parseInt(String.valueOf(infoMesa.get(5)).substring(4, 6));
 
-                informacion.put("fecha", Integer.toString(a + b + c));
-                informacion.put("orden", String.valueOf(infoMesa.get(6)));
+                    informacion.put("fecha", Integer.toString(a + b + c));
+                    informacion.put("orden", String.valueOf(infoMesa.get(6)));
 
-                informacion.put("estatus", String.valueOf(infoMesa.get(7)));
-                informacion.put("tipodocumento", String.valueOf(infoMesa.get(8)));
+                    informacion.put("estatus", String.valueOf(infoMesa.get(7)));
+                    informacion.put("tipodocumento", String.valueOf(infoMesa.get(8)));
 
-                informacion.put("cantidad", String.valueOf(((Double) ((ArrayList) infoMesa.get(9)).get(1)).intValue()));
+                    informacion.put("cantidad", String.valueOf(((Double) ((ArrayList) infoMesa.get(9)).get(1)).intValue()));
 
-                if(infoMesa.get(2)!=null) {
-                    if (referencia.containsKey(infoMesa.get(2).toString())) {
-                        if (Integer.parseInt(referencia.get(infoMesa.get(2).toString())) > Integer.parseInt(String.valueOf(infoMesa.get(6)))) {
+                    if (infoMesa.get(2) != null) {
+                        if (referencia.containsKey(infoMesa.get(2).toString())) {
+                            if (Integer.parseInt(referencia.get(infoMesa.get(2).toString())) > Integer.parseInt(String.valueOf(infoMesa.get(6)))) {
+                                referencia.put(infoMesa.get(2).toString(), String.valueOf(infoMesa.get(6)));
+                            }
+
+                        } else {
                             referencia.put(infoMesa.get(2).toString(), String.valueOf(infoMesa.get(6)));
+                            //lista_art_temporales.add(informacion);
                         }
-
-                    } else {
-                        referencia.put(infoMesa.get(2).toString(), String.valueOf(infoMesa.get(6)));
-                        //lista_art_temporales.add(informacion);
                     }
+                    lista_art_temporales.add(informacion);
                 }
-                lista_art_temporales.add(informacion);
-
-
 
             }
 
@@ -399,16 +409,20 @@ public class PedidosPendientes extends AppCompatActivity {
                 c7.setGravity(Gravity.CENTER);
 
                 TextView c8 = new TextView(getApplicationContext());
-                Bundle b = this.getIntent().getExtras();
+               /* Bundle b = this.getIntent().getExtras();
 
                 assert b != null;
-                //String refextra = b.getString("refextra");
-                String refextra = getIntent().getStringExtra("refextra");
-                    c8.setText("Referencia Extra " + refextra);
-                    c8.setTextColor(Color.parseColor(colors1[x % 2]));
-                    c8.setTextSize(20);
-                    c8.setTypeface(null, Typeface.BOLD);
-                    c8.setGravity(Gravity.CENTER);
+                String refextra = b.getString("refextra");*/
+                //String refextra = getIntent().getStringExtra("refextra");
+                String refextra = "";
+                if (lista_art_temporales.get(x).get("extra") != null) {
+                    refextra = lista_art_temporales.get(x).get("extra").toString();
+                }
+                c8.setText("R: " + refextra);
+                c8.setTextColor(Color.parseColor(colors1[x % 2]));
+                c8.setTextSize(20);
+                c8.setTypeface(null, Typeface.BOLD);
+                c8.setGravity(Gravity.CENTER);
 
 
                 // recibirDatos();
@@ -475,7 +489,7 @@ public class PedidosPendientes extends AppCompatActivity {
         layout2.setBackgroundResource(resources[x % 2]);
 
 
-        if(lista_art_temporales.get(x).get("estatus").toString().equals("PROCESADA")){
+        if(lista_art_temporales.get(x).get("estatusPartida").toString().equals("PROCESADA")){
             layout2.setBackgroundColor(Color.parseColor(colors[2]));
             layout2.setBackgroundResource(resources[2]);
 

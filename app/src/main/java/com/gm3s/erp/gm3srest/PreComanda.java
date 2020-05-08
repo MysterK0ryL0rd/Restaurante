@@ -388,7 +388,7 @@ public class PreComanda extends AppCompatActivity {
                 intent.putExtra("InfoMapa", JSONValue.toJSONString(info));
                 intent.putExtra("tipo_documento", tipo_documento);
                 intent.putExtra("comensales", comensales.toString());
-                intent.putExtra("idComensal", "M:" + idMesa + " C:" + x);
+                intent.putExtra("idComensal", "M:" + idMesa + " C:" + x+1);
                 intent.putExtra("idMesa", idMesa.toString());
                 intent.putExtra("id_doc", id_doc);
 

@@ -24,40 +24,38 @@
 
     <ScrollView
         android:id="@+id/layout"
-        android:layout_height="fill_parent"
-        android:scrollbars="horizontal|vertical"
         android:layout_width="fill_parent"
-        android:scrollbarStyle="outsideInset"
-        android:fillViewport="true"
-        android:layout_alignParentBottom="true"
+        android:layout_height="fill_parent"
         android:layout_below="@+id/app_bar"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical">
 
         <HorizontalScrollView
             android:id="@+id/horizontalView"
-            android:layout_height="fill_parent"
-            android:scrollbars="horizontal|vertical"
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dip"
+            android:layout_height="fill_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:fillViewport="false">
-
+            android:layout_marginTop="5dip"
+            android:fillViewport="false"
+            android:scrollbars="horizontal|vertical">
 
 
             <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:stretchColumns="0,1"
                 android:id="@+id/main_table"
-                android:layout_height="wrap_content" android:layout_width="fill_parent"
-                android:layout_alignParentTop="true">
-
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:stretchColumns="0,1">
 
 
             </TableLayout>
         </HorizontalScrollView>
     </ScrollView>
-
 
 
 </LinearLayout>
