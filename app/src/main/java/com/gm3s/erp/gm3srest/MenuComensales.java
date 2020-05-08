@@ -360,12 +360,12 @@ public class MenuComensales extends AppCompatActivity {
         final ImageView c1 = new ImageView(getApplicationContext());
         if((x%2)==0){
             c1.setImageResource(R.drawable.comen1);
-            if(JSONValue.toJSONString(productos_list).contains(" C:"+(x))){
+            if(JSONValue.toJSONString(productos_list).contains(" C:"+(x+1))){
                 c1.setImageResource(R.drawable.comen4);
             }
         }else {
             c1.setImageResource(R.drawable.comen2);
-            if(JSONValue.toJSONString(productos_list).contains(" C:"+(x))){
+            if(JSONValue.toJSONString(productos_list).contains(" C:"+(x+1))){
                 c1.setImageResource(R.drawable.comen3);
             }
         }
@@ -396,7 +396,7 @@ public class MenuComensales extends AppCompatActivity {
                     intent.putExtra("InfoMapa", JSONValue.toJSONString(info));
                     intent.putExtra("tipo_documento", tipo_documento);
                     intent.putExtra("comensales", comensales.toString());
-                    intent.putExtra("idComensal", "M:" + idMesa + " C:" + x);//------------------------------------------------------------------------"
+                    intent.putExtra("idComensal", "M:" + idMesa + " C:" + (x+1));//------------------------------------------------------------------------"
                     intent.putExtra("idMesa", idMesa.toString());
                     startActivity(intent);
                     finish();
@@ -1037,7 +1037,8 @@ public class MenuComensales extends AppCompatActivity {
 
                 for (int j = 0; j < pairs2.length; j++) {
                     String[] pairs3 = pairs2[j].split("=");
-                    articulo_map.put(pairs3[0], pairs3[1]);
+                    if(pairs3.length > 1)
+                        articulo_map.put(pairs3[0], pairs3[1]);
                 }
 
                 System.out.println( " $$$$$$$$$444" + articulo_map);
@@ -1181,19 +1182,30 @@ public class MenuComensales extends AppCompatActivity {
         Double total_subtotal = 0.0;
         for(int i = 0; i< productos_list.size(); i++){
             total_subtotal += Double.parseDouble(productos_list.get(i).get("cantidad").toString())*Double.parseDouble(productos_list.get(i).get("precio").toString()) ;
-            if(productos_list.get(i).containsKey("extra")){
-                if (!productos_list.get(i).get("extra").toString().equals("")){
-                productos_list.get(i).put("idC",productos_list.get(i).get("idC")+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre + " | "+productos_list.get(i).get("extra").toString());
-                productos_list.get(i).remove("extra");}
+            /*if(productos_list.get(i).containsKey("extra")){
+                if (productos_list.get(i).get("extra") != null) {
+                    String refextra = getIntent().getExtras().getString("extra");
+                    productos_list.get(i).put("idC", productos_list.get(i).get("idC") + " F:" + escaner_folio.toString() + " SF:" + laSerieNombre + "|" + productos_list.get(i).get("extra").toString() + "|" + refextra);
+                    productos_list.get(i).remove("extra");
+                }
                 else{
-                    productos_list.get(i).put("idC",productos_list.get(i).get("idC")+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre);
+                    String refextra = getIntent().getExtras().getString("extra");
+                    productos_list.get(i).put("idC","PENDIENTE|"+productos_list.get(i).get("idC")+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+ "|" + refextra);
 
                 }
             }else{
-                productos_list.get(i).put("idC",productos_list.get(i).get("idC")+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre);
+                String refextra = getIntent().getExtras().getString("extra");
+                productos_list.get(i).put("idC","PENDIENTE|"+productos_list.get(i).get("idC")+" F:"+escaner_folio.toString()+" SF:"+laSerieNombre+ "|" + refextra);
 
+            }*/
+
+            if(productos_list.get(i).get("extra") != null){
+                productos_list.get(i).put("idC","PENDIENTE|"+productos_list.get(i).get("idC") + " F:" + escaner_folio.toString() + " SF:" + laSerieNombre + "|" + productos_list.get(i).get("extra").toString());
+                productos_list.get(i).remove("extra");
+            }else {
+                productos_list.get(i).put("idC", "PENDIENTE|"+productos_list.get(i).get("idC") + " F:" + escaner_folio.toString() + " SF:" + laSerieNombre);
+                productos_list.get(i).remove("extra");
             }
-
         }
 
 

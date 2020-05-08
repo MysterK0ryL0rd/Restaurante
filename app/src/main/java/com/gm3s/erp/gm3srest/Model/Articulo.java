@@ -217,7 +217,7 @@ public class Articulo implements Serializable {
                 ", impuesto=" + impuesto +
                 ", counter=" + counter +
                 ", codigoUsuario=" + codigoUsuario +
-                ", cantidad=" + cantidad
-               ;
+                ", cantidad=" + cantidad +
+                        ", extra=" + referencia;
     }
 }
