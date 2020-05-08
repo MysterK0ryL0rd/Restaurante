@@ -9,157 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a37fcce-3470-40ae-a2cc-4fce4807cc2f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/gm3s/erp/gm3sapp/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/gm3s/erp/gm3srest/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ActividadVacia.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ActividadVacia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Arrendamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Arrendamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/AsignacionDeStacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/AsignacionDeStacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Bluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Bluetooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/BusquedaInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/BusquedaInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/CapturarOrdenServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/CapturarOrdenServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Comanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Comanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ComandasGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ComandasParticular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasParticular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ComidaCorrida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComidaCorrida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ConfiguracionRestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ConfiguracionRestaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ConsultarStacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ConsultarStacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ConsultarUbicacionRack.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ConsultarUbicacionRack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ContenedorFragmentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ContenedorFragmentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ContenedorFragmentos2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ContenedorFragmentos2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ContenedorFragmentos3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ContenedorFragmentos3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ControlVehicular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ControlVehicular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/CuentaPorComensal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/CuentaPorComensal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/DescripcionCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/DescripcionCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Direccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/FacturaArticulos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/FacturaArticulos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Honorarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Honorarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/InformeCirugia.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/InformeCirugia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ListaArticuloProovedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ListaArticuloProovedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MapsActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuArticulosLineas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuArticulosLineas2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuArticulosLineas3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuCajas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuCajas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuComensales.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuLineas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuLineas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuLineas2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuLineas2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuLineas3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuLineas3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuMesas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuMesas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Articulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Bodega.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Bodega.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/CookieE.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/CookieE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Mesa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/PersistentCookieStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/PersistentCookieStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/ReporteGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/ReporteGerencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/SerializableCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/SerializableCookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/SharedPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/SharedPreference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Model/VentaTotalSerieVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/VentaTotalSerieVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MovimientosConsumos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MovimientosConsumos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/NuevoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/NuevoCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/NuevoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/NuevoMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/OrdenAutomatica.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/OrdenAutomatica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/PayPal/PayPalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PayPal/PayPalActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/PedidosPendientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PedidosPendientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/PreComanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PreComanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ProgramacionCirugia.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ProgramacionCirugia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ReporteVentasNetas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ReporteVentasNetas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Service/ConexionServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Service/ConexionServidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Service/ErrorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Service/ErrorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Service/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Service/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/UploadPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/UploadPhoto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/Util/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Util/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Blue.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Blue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Busqueda_Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Busqueda_Articulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/CamposAdicionalesOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/CamposAdicionalesOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Configuracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Confirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Confirmation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/CorteCaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/CorteCaja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/DocumentoBluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/DocumentoBluetooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/DocumentoCamara.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/DocumentoCamara.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Escaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Escaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Escaner3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Escaner3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/EstadoResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/EstadoResultados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Factura3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Factura3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Informacion_Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Informacion_Articulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/ListaOrdenServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/ListaOrdenServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/LogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/NuevoArticulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/NuevoArticulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/NuevoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/NuevoUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Registro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/ReporteExistencias.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/ReporteExistencias.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/ReporteGerencialActividad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/ReporteGerencialActividad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/StarBitmap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/StarBitmap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/TotalesSerie2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/TotalesSerie2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_corte_caja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_corte_caja.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_corte_caja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_corte_caja.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_corte_caja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_corte_caja.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal-land/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal-land/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_configuracion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_confirmation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_confirmation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-small/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-small/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_actividad_vacia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_actividad_vacia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_asignacion_de_stacks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_asignacion_de_stacks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_busqueda__articulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_busqueda__articulo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_busqueda_inventario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_busqueda_inventario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_capturar_orden_servicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_capturar_orden_servicio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_comida_corrida.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_comida_corrida.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_configuracion_restaurante.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_configuracion_restaurante.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_consultar_stacks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_consultar_stacks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_consultar_ubicacion_rack.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_consultar_ubicacion_rack.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contenedor_fragmentos3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_control_vehicular.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_control_vehicular.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_corte_caja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_corte_caja.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cuenta_por_comensal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cuenta_por_comensal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_descripcion_cliente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_descripcion_cliente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_direccion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_direccion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_informacion__articulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_informacion__articulo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_informe_cirugia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_informe_cirugia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_lista_orden_servicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_lista_orden_servicio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_articulos_lineas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_articulos_lineas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_cajas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_cajas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_cliente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_cliente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_lineas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_lineas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movimientos_consumos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_movimientos_consumos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_articulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_articulo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_cliente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_cliente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_usuario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_orden_automatica.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_orden_automatica.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pay_pal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pay_pal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_programacion_cirugia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_programacion_cirugia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reporte_existencias.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reporte_existencias.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reporte_ventas_netas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reporte_ventas_netas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_photo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_menu_mesas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_menu_mesas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_confirmation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_confirmation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_registro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_registro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/gm3s/erp/gm3sapp/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/gm3s/erp/gm3srest/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GM3SApp2/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../GM3SApp2/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GM3SApp2/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GM3SApp2/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GM3sVentaPerfumes/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GM3sVentaPerfumes/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tienda2/Llaves/Nuevo documento de texto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Tienda2/Llaves/Nuevo documento de texto.txt" afterDir="false" />
-    </list>
+    <list default="true" id="8a37fcce-3470-40ae-a2cc-4fce4807cc2f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +19,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Android_6" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ZL4222D5VW" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -178,118 +28,14 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuMesas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="423" selection-start-line="423" selection-end-line="423" />
-              <folding>
-                <element signature="e#10308#11346#0" expanded="true" />
-                <element signature="e#11345#11346#0" expanded="true" />
-                <element signature="e#15090#15679#0" expanded="true" />
-                <element signature="e#15678#15679#0" expanded="true" />
-                <element signature="e#15731#15880#0" expanded="true" />
-                <element signature="e#15879#15880#0" expanded="true" />
-                <element signature="e#19180#19365#0" expanded="true" />
-                <element signature="e#19364#19365#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="347" column="13" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icon.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/TotalesSerie2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/gm3s/erp/gm3srest/BuildConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PreComanda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="819" column="38" selection-start-line="819" selection-start-column="38" selection-end-line="819" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/LogIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3179#4729#0" expanded="true" />
-                <element signature="e#4728#4729#0" expanded="true" />
-                <element signature="e#4836#5031#0" expanded="true" />
-                <element signature="e#5030#5031#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_log_in.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -332,42 +78,7 @@
     <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/demo1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_pedido_copia.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pedido_1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_pedido.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pedido.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/FacturaArticulos.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/Configuracion.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuCajas.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/CapturarOrdenServicio.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuArticulosLineas2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuComensales.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MenuMesas.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/ComandasGeneral.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/PreComanda.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-large/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-normal-land/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-small/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_log_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/LogIn.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/View/TotalesSerie2.java" />
-        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/gm3s/erp/gm3sapp/BuildConfig.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-      </list>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1920" />
@@ -375,57 +86,6 @@
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="GM3SApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="release" />
@@ -487,8 +147,6 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -569,41 +227,16 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1600" height="900" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2117117" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Captures" order="2" side_tool="true" weight="0.24967825" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498713" weight="0.32984293" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5315315" weight="0.35078534" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="8" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.46846846" side_tool="true" visible="true" weight="0.35078534" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.64157015" weight="0.32460734" />
-      <window_info anchor="bottom" id="Android Profiler" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Preview" order="8" weight="0.25482625" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,103 +244,86 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuCajas.java</url>
           <line>152</line>
-          <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>1164</line>
-          <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas.java</url>
           <line>178</line>
-          <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>1047</line>
-          <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>211</line>
-          <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>758</line>
-          <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>1289</line>
-          <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>1299</line>
-          <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>269</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>1360</line>
-          <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>189</line>
-          <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuMesas.java</url>
           <line>428</line>
-          <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java</url>
           <line>301</line>
-          <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasGeneral.java</url>
           <line>244</line>
-          <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasGeneral.java</url>
           <line>596</line>
-          <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PreComanda.java</url>
           <line>828</line>
-          <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PreComanda.java</url>
           <line>1524</line>
-          <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
@@ -766,369 +382,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/abc.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pedido_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7395">
-          <caret line="493" column="63" selection-start-line="493" selection-start-column="63" selection-end-line="493" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_pedido.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7290">
-          <caret line="486" selection-start-line="486" selection-end-line="486" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Pedido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67005">
-          <caret line="4730" selection-start-line="4730" selection-end-line="4730" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pedido.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7395">
-          <caret line="493" column="63" selection-start-line="493" selection-start-column="63" selection-end-line="493" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/FacturaArticulos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="169" column="47" selection-start-line="169" selection-start-column="47" selection-end-line="169" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_pedido_copia.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7275">
-          <caret line="485" column="63" selection-start-line="485" selection-start-column="63" selection-end-line="485" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/demo1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7275">
-          <caret line="485" column="63" selection-start-line="485" selection-start-column="63" selection-end-line="485" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/Configuracion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="121" selection-start-line="20" selection-start-column="121" selection-end-line="20" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_comandas_general.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pre_comanda.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Comanda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37665">
-          <caret line="2602" column="54" selection-start-line="2602" selection-start-column="54" selection-end-line="2602" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_comensales.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/CapturarOrdenServicio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="538" column="65" selection-start-line="538" selection-start-column="65" selection-end-line="538" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/os/AsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="593" column="53" selection-start-line="593" selection-start-column="53" selection-end-line="593" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/Model/Mesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_mesas.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuCajas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasGeneral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="246" column="12" selection-start-line="246" selection-start-column="12" selection-end-line="246" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ContenedorFragmentos2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="201" column="102" selection-start-line="201" selection-start-column="102" selection-end-line="201" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/ComandasParticular.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="183" column="39" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_articulos_lineas.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuArticulosLineas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="167" column="24" selection-start-line="167" selection-start-column="24" selection-end-line="167" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuComensales.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15675">
-          <caret line="1053" column="319" selection-start-line="1053" selection-start-column="319" selection-end-line="1053" selection-end-column="319" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large-land/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="157" column="53" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="145" column="49" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal-land/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="155" column="53" selection-start-line="155" selection-start-column="53" selection-end-line="155" selection-end-column="53" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-small/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="145" column="49" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge-land/activity_log_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f11f69e80d08f5adf34541322369087/jars/classes.jar!/android/support/v7/appcompat/BuildConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/PreComanda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="819" column="38" selection-start-line="819" selection-start-column="38" selection-end-line="819" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/main_activity_full_content.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3sapp/MapsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="347" column="13" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/MenuMesas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="423" selection-start-line="423" selection-end-line="423" />
-          <folding>
-            <element signature="e#10308#11346#0" expanded="true" />
-            <element signature="e#11345#11346#0" expanded="true" />
-            <element signature="e#15090#15679#0" expanded="true" />
-            <element signature="e#15678#15679#0" expanded="true" />
-            <element signature="e#15731#15880#0" expanded="true" />
-            <element signature="e#15879#15880#0" expanded="true" />
-            <element signature="e#19180#19365#0" expanded="true" />
-            <element signature="e#19364#19365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/TotalesSerie2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="97" selection-start-line="76" selection-start-column="97" selection-end-line="76" selection-end-column="97" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gm3s/erp/gm3srest/View/LogIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3179#4729#0" expanded="true" />
-            <element signature="e#4728#4729#0" expanded="true" />
-            <element signature="e#4836#5031#0" expanded="true" />
-            <element signature="e#5030#5031#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/gm3s/erp/gm3srest/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
