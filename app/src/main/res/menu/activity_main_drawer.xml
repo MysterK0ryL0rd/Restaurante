@@ -68,6 +68,7 @@
 
     <item android:title="Restaurante">
         <menu>
+            <item android:id="@+id/nav_opc5_1"     android:title="Consulta de Menus" android:icon="@drawable/triangle"/>
             <item android:id="@+id/nav_opc5_2"     android:title="Menu Mesas" android:icon="@drawable/triangle"/>
             <item android:id="@+id/nav_opc5_6"     android:title="Menu Cajas" android:icon="@drawable/triangle"/>
             <item android:id="@+id/nav_opc5_3"     android:title="Pendientes x Linea" android:icon="@drawable/triangle"/>

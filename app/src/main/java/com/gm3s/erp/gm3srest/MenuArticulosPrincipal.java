@@ -67,8 +67,8 @@ import java.util.Map;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class MenuArticulosLineas2 extends Fragment {
-    String tipo_documento = "", id_doc= "",idComensal = "";
+public class MenuArticulosPrincipal extends Fragment {
+    String tipo_documento = "remisioncliente", id_doc= "",idComensal = "";
     static String idLinea;
     private SharedPreference sharedPreference;
     String server = "";
@@ -108,12 +108,8 @@ public class MenuArticulosLineas2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       rootView =  inflater.inflate(R.layout.activity_menu_articulos_lineas, container, false);
+        rootView =  inflater.inflate(R.layout.menu_articulos_principal, container, false);
         return rootView;
-
-
-
-
     }
 
 
@@ -126,52 +122,6 @@ public class MenuArticulosLineas2 extends Fragment {
     public void onStart(){
         super.onStart();
 
-        Intent intent = getActivity().getIntent();
-        String PedidoMapa = (String) getActivity().getIntent().getSerializableExtra("PedidoMapa");
-        String InfoMapa = (String) getActivity().getIntent().getSerializableExtra("InfoMapa");
-        String PedidoArt = (String)intent.getSerializableExtra("PedidoArt");
-        comensales = Integer.parseInt((String)intent.getSerializableExtra("comensales"));
-        idComensal = ((String)intent.getSerializableExtra("idComensal"));
-        tipo_documento = (String)intent.getSerializableExtra("tipo_documento");
-        idMesa = Integer.parseInt((String)intent.getSerializableExtra("idMesa"));
-        if(intent.getSerializableExtra("id_doc")!=null) {
-            id_doc = (String) intent.getSerializableExtra("id_doc");
-        }
-
-        System.out.println("El valor de esCaja 1"  +esCaja);
-
-        if(intent.getSerializableExtra("esCaja")!=null) {
-            esCaja = true;
-            referenciaGlobal= ((String)intent.getSerializableExtra("esCaja"));
-            System.out.println("Si es CAJA");
-        }
-
-        if(intent.getSerializableExtra("user")!=null) {
-
-            user= ((String)intent.getSerializableExtra("user"));
-
-        }
-        System.out.println("El valor de esCaja 2" + esCaja);
-
-
-
-
-        System.out.println("Contenido de PedidoMapa: " + PedidoMapa);
-        System.out.println("Contenido de InfoMapa: " + InfoMapa);
-        System.out.println("Contenido de PedidoArt: " + PedidoArt);
-
-       // if(PedidoMapa.equalsIgnoreCase("")){
-            convertirMapa(PedidoMapa);
-     //   }
-
-
-      //  if(InfoMapa.equalsIgnoreCase("")){
-            convertirMapa2(InfoMapa);
-      //  }
-
-       // if(PedidoArt.equalsIgnoreCase("")){
-            convertirMapa3(PedidoArt);
-      //  }
 
         sharedPreference = new SharedPreference();
         server = sharedPreference.getValue(rootView.getContext());
@@ -181,7 +131,8 @@ public class MenuArticulosLineas2 extends Fragment {
         prices.bringToFront();
 
         contador = (TextView) rootView.findViewById(R.id.contador);
-
+        HttpAsyncTask a = new HttpAsyncTask();
+        a.execute(server + "/medialuna/spring/listar/serie/contar/" + tipo_documento + "/");
 
         titulo = (TextView) rootView.findViewById(R.id.titulo);
 
@@ -189,81 +140,12 @@ public class MenuArticulosLineas2 extends Fragment {
         ok_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                System.out.println("El valor de esCaja 3"  +esCaja);
-
-
-
-                Iterator it = mapa_articulos.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry) it.next();
-
-
-                    mapa_articulos2.put((Integer) pair.getKey(), mapa_articulos.get(pair.getKey()).toString());
-
-                    HashMap tmp = new HashMap();
-                    tmp.put("@class", HashMap.class.getName());
-                    tmp.put("id", (Integer) pair.getKey());
-                    tmp.put("cantidad", mapa_articulos.get(pair.getKey()).getCantidad());
-                    tmp.put("counter", mapa_articulos.get(pair.getKey()).getCounter());
-                    tmp.put("descripcion", mapa_articulos.get(pair.getKey()).getNombre()); //
-                    tmp.put("descuento", 0.0);
-                    tmp.put("precio", mapa_articulos.get(pair.getKey()).getPrecioBase());
-                    tmp.put("total", mapa_articulos.get(pair.getKey()).getPrecioBase()*mapa_articulos.get(pair.getKey()).getCantidad());
-                    tmp.put("idC", idComensal);
-                    if(mapa_articulos.get(pair.getKey()).getReferencia().length()>0)
-                        tmp.put("extra",mapa_articulos.get(pair.getKey()).getReferencia());
-                  //  if(!esCaja)
-                       // tmp.put("idC", idComensal + mapa_articulos.get(pair.getKey()).getReferencia() );
-                    productos_list.add(tmp);
-                    lista_art.add(mapa_articulos.get(pair.getKey()));
-                    it.remove(); // avoids a ConcurrentModificationException
-                }
-
-
-                info.put("counter", String.valueOf(counter));
-                Intent i;
-
-
-                if(esCaja){
-                    id_tmp=idMesa;
-
-                    System.out.println("Si es caja" + laSerie + tipo_documento);
-                    HttpAsyncTask6 b = new HttpAsyncTask6();
-                    b.execute(server + "/medialuna/spring/documento/obtener/folio/" + laSerie + "/" + tipo_documento + "/");
-
-
-
-                }
-                else {
-                    System.out.println("No es caja");
-                    if (id_doc.equals("")) {
-                        i = new Intent(getActivity().getApplicationContext(), MenuComensales.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        i.putExtra("PedidoArt", JSONValue.toJSONString(lista_art));
-                        i.putExtra("PedidoMapa", JSONValue.toJSONString(productos_list));
-                        i.putExtra("InfoMapa", JSONValue.toJSONString(info));
-                        i.putExtra("tipo_documento", tipo_documento);
-                        i.putExtra("comensales", comensales.toString());
-                        i.putExtra("idMesa", idMesa.toString());
-                        i.putExtra("esCaja", esCaja);
-                        i.putExtra("user", user);
-                        lista_art.clear();
-                        productos_list.clear();
-                        startActivity(i);
-                        getActivity().finish();
-
-                    } else {
-
-
-                        HttpAsyncTask8 a = new HttpAsyncTask8();
-                        a.execute(server + "/medialuna/spring/documento/modificar/app/mesa/" + id_doc);
-                    }
-                }
-
-
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
             }
-        });
+
+        }
+        );
 
 
 
@@ -283,8 +165,106 @@ public class MenuArticulosLineas2 extends Fragment {
 
     }
 
+    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+
+            return POST(urls[0]);
+
+        }
 
 
+        @Override
+        protected void onPostExecute(String result) {
+
+            if (validacion) {
+                convertirDatos(result);
+            }
+        }
+    }
+
+    public static String POST(String url) {
+        String result = "";
+        InputStream inputStream = null;
+        try {
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            httpclient.getCookieStore().addCookie(pc.getCookies().get(0));
+            HttpGet httppost = new HttpGet(url);
+            httppost.setHeader("Accept", "application/json; text/javascript");
+            String json = "";
+            try {
+
+                HttpResponse httpResponse = httpclient.execute(httppost);
+                inputStream = httpResponse.getEntity().getContent();
+                if (inputStream != null) {
+                    result = Helper.convertInputStreamToString(inputStream);
+                } else
+                    result = "Did not work!";
+
+                if (result.contains("GM3s Software Index")) {
+                    validacion = false;
+                } else {
+                    validacion = true;
+                }
+            } catch (IOException e) {
+                System.out.println("ERROR 1.1");
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            System.out.println("ERROR 2.1");
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+
+    public void convertirDatos(String cadena) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Map<String, Object> arrayData0 = mapper.readValue(cadena, HashMap.class);
+
+
+
+
+            if(arrayData0.containsKey("serie")) {
+                HashMap<String, Object> arrayData = (HashMap<String, Object>) arrayData0.get("serie");
+                String idS = arrayData.get("id").toString();
+                String nombreS = arrayData.get("nombre").toString();
+                laSerie = idS;
+                //escaner_txt_serie.setText(nombreS);
+
+                info.put("serie", nombreS);
+                info.put("serie_id", laSerie);
+                Object bodega1 = (Object) arrayData.get("bodega");
+
+                HashMap<String, Object> cliente = (HashMap<String, Object>) arrayData.get("cliente");
+                HashMap<String, Object> bodega = (HashMap<String, Object>) arrayData.get("bodega");
+                String codigoC = cliente.get("id").toString();
+                String nombreC = cliente.get("nombre").toString();
+                info.put("cliente", nombreC);
+                info.put("cliente_id", codigoC);
+
+                if(bodega1 == null){
+
+                }
+                else{
+                    String codigoB = bodega.get("id").toString();
+                    String laBodega = codigoB;
+                    info.put("bodega",laBodega);
+                }
+            }
+
+        } catch (JsonParseException e1) {
+            e1.printStackTrace();
+        } catch (JsonMappingException e1) {
+            e1.printStackTrace();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+
+    }
 
     private class HttpAsyncTask7 extends AsyncTask<String, Void, String> {
         @Override
@@ -430,19 +410,19 @@ public class MenuArticulosLineas2 extends Fragment {
 
     public void crearTablaArticulos2() {
 
-       // String[] colors1 = {"#0084aa","#c2272d","#333333","#3b3251","#ba2c54","#fed353","#0084aa","#7ca755","#333333","#ef812c","#3e8c64","#c2272d"};
+        // String[] colors1 = {"#0084aa","#c2272d","#333333","#3b3251","#ba2c54","#fed353","#0084aa","#7ca755","#333333","#ef812c","#3e8c64","#c2272d"};
 
         String[] colors1 = {"#41d9aa","#496c8c","#41d9aa","#496c8c","#41d9aa","#496c8c"};
         int[] resources = {R.drawable.tabla_azul, R.drawable.tabla_verdel, R.drawable.tabla_azul, R.drawable.tabla_verdel, R.drawable.tabla_verdel, R.drawable.tabla_azul, R.drawable.tabla_verdel, R.drawable.tabla_azul};
 
         //Drawable[] estilos = {R.drawable.tabla_azul};
 
-       // prices.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        // prices.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         //prices.setOrientation(LinearLayout.HORIZONTAL);
 
         //                android:endColor="#70dd8e"
         //android:centerColor="#71cdc8"
-       // android:startColor="#58caee"
+        // android:startColor="#58caee"
 
 
         prices.removeAllViews();
@@ -458,7 +438,7 @@ public class MenuArticulosLineas2 extends Fragment {
                 int x = j ;
                 final int y = j  + 1;
                 final int xx = j +2;
-          //      final int yy = j  + 3;
+                //      final int yy = j  + 3;
 
                 LinearLayout layout0 = new LinearLayout(getActivity().getApplicationContext());
                 layout0.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
@@ -467,17 +447,17 @@ public class MenuArticulosLineas2 extends Fragment {
 
 
 
-               LinearLayout layout1 = crearElemento(colors1, x, resources);
-               layout0.addView(layout1);
+                LinearLayout layout1 = crearElemento(colors1, x, resources);
+                layout0.addView(layout1);
 
-               LinearLayout layout2 = crearElemento(colors1, y, resources);
-               layout0.addView(layout2);
+                LinearLayout layout2 = crearElemento(colors1, y, resources);
+                layout0.addView(layout2);
 
-               LinearLayout layout3 = crearElemento(colors1, xx, resources);
-               layout0.addView(layout3);
+                LinearLayout layout3 = crearElemento(colors1, xx, resources);
+                layout0.addView(layout3);
 
-               //LinearLayout layout4 = crearElemento(colors1, yy, resources);
-               //layout0.addView(layout4);
+                //LinearLayout layout4 = crearElemento(colors1, yy, resources);
+                //layout0.addView(layout4);
 
 
 
@@ -490,20 +470,20 @@ public class MenuArticulosLineas2 extends Fragment {
 
 
             if(sobrante != 0){
-            LinearLayout layout90 = new LinearLayout(getActivity().getApplicationContext());
-            layout90.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-            layout90.setOrientation(LinearLayout.HORIZONTAL);
+                LinearLayout layout90 = new LinearLayout(getActivity().getApplicationContext());
+                layout90.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                layout90.setOrientation(LinearLayout.HORIZONTAL);
 
-            if(sobrante == 1){
-                LinearLayout layout1 = crearElemento(colors1, lista_art_temporales.size()-sobrante, resources);
-                layout90.addView(layout1);
-            }
-            if(sobrante == 2){
-                LinearLayout layout1 = crearElemento(colors1, lista_art_temporales.size()-sobrante, resources);
-                layout90.addView(layout1);
-                LinearLayout layout2 = crearElemento(colors1, lista_art_temporales.size()-sobrante+1, resources);
-                layout90.addView(layout2);
-            }
+                if(sobrante == 1){
+                    LinearLayout layout1 = crearElemento(colors1, lista_art_temporales.size()-sobrante, resources);
+                    layout90.addView(layout1);
+                }
+                if(sobrante == 2){
+                    LinearLayout layout1 = crearElemento(colors1, lista_art_temporales.size()-sobrante, resources);
+                    layout90.addView(layout1);
+                    LinearLayout layout2 = crearElemento(colors1, lista_art_temporales.size()-sobrante+1, resources);
+                    layout90.addView(layout2);
+                }
            /* if(sobrante == 3){
                 LinearLayout layout1 = crearElemento(colors1, lista_art_temporales.size()-sobrante, resources);
                 layout90.addView(layout1);
@@ -534,12 +514,12 @@ public class MenuArticulosLineas2 extends Fragment {
     @SuppressLint("ResourceType")
     public LinearLayout crearElemento(String[] colors, final int x, int[] resources){
         LinearLayout layout2 = new LinearLayout(getActivity().getApplicationContext());
-        layout2.setPadding(20, 20, 20, 2);
+        layout2.setPadding(20, 20, 20, 20);
         float scale = getResources().getDisplayMetrics().density;//3.0cel    1.2tablet
         if(scale<2)
             scale=Float.parseFloat("1.8");
-       // Toast.makeText(getActivity().getApplicationContext(), String.valueOf(scale), Toast.LENGTH_LONG).show();
-        layout2.setLayoutParams(new LinearLayout.LayoutParams(Math.round(180 * scale), Math.round(220 * scale))); //500 500 cel
+        // Toast.makeText(getActivity().getApplicationContext(), String.valueOf(scale), Toast.LENGTH_LONG).show();
+        layout2.setLayoutParams(new LinearLayout.LayoutParams(Math.round(180 * scale), Math.round(120 * scale))); //500 500 cel
         layout2.setOrientation(LinearLayout.VERTICAL);
         layout2.setGravity(Gravity.CENTER);
         layout2.setBackgroundColor(Color.parseColor(colors[x % 6]));
@@ -554,12 +534,12 @@ public class MenuArticulosLineas2 extends Fragment {
         ImageView bt = new ImageView(getActivity().getApplicationContext());
 
 
-        String path = "https://s3.amazonaws.com/imagenes2.gm3s.erp.mx/desarrollo/erp/501/archivo/";
+        String path = "";
         if (lista_art_temporales.get(x).getAwsUrl() != null) {
             path = lista_art_temporales.get(x).getAwsUrl();
         }
         if(!path.isEmpty())
-        Picasso.with(this.getActivity()).load(path).into(bt);
+            Picasso.with(this.getActivity()).load(path).into(bt);
         bt.setImageResource(R.drawable.signed3);
         bt.setLayoutParams(new TableRow.LayoutParams(Math.round(54 * scale), Math.round(36 * scale)));
         bt.setOnClickListener(new View.OnClickListener() {
@@ -574,12 +554,12 @@ public class MenuArticulosLineas2 extends Fragment {
                 final ImageView imagenesComida = (ImageView) ima.findViewById(R.id.imagenes);
                 final TextView comentarioComida = (TextView) ima.findViewById(R.id.comentario);
                 final TextView platillo = (TextView) ima.findViewById(R.id.platillo);
-                String path = "https://s3.amazonaws.com/imagenes2.gm3s.erp.mx/desarrollo/erp/501/archivo/";
+                String path = "";
                 if (lista_art_temporales.get(x).getAwsUrl() != null) {
                     path = lista_art_temporales.get(x).getAwsUrl();
                 }
                 if(!path.isEmpty())
-                Picasso.with(getContext().getApplicationContext()).load(path).resize(500,500).centerInside().into(imagenesComida);
+                    Picasso.with(getContext().getApplicationContext()).load(path).resize(500,500).centerInside().into(imagenesComida);
                 String come = lista_art_temporales.get(x).getNombre();
                 platillo.setText(come);
                 //if(lista_art_temporales.get(x).getDescripcion().length()>10000)
@@ -589,10 +569,6 @@ public class MenuArticulosLineas2 extends Fragment {
                 info.show();
             }
         });
-        TextView c3 = new TextView(getActivity().getApplicationContext());
-        c3.setText("Existencia: " + lista_art_temporales.get(x).getExistencia().toString());
-        c3.setGravity(Gravity.CENTER);
-        c3.setTextColor(Color.WHITE);
         TextView c4 = new TextView(getActivity().getApplicationContext());
         c4.setTextColor(Color.WHITE);
         c4.setGravity(Gravity.CENTER);
@@ -611,208 +587,13 @@ public class MenuArticulosLineas2 extends Fragment {
         layout00.setOrientation(LinearLayout.HORIZONTAL);
         layout00.setGravity(Gravity.CENTER);
 
-        final EditText c8 = new EditText(getActivity().getApplicationContext());
-        c8.setText("0");
-        c8.setEnabled(false);
-        c8.setTextSize(30);
-        c8.setTextColor(Color.WHITE);
 
-        Button c7 = new Button(getActivity().getApplicationContext());
-        c7.setText("-");
-        c7.setLayoutParams(new TableRow.LayoutParams(Math.round(54 * scale), Math.round(36 * scale))); //cel  para tablet para tablet la mitad
-        c7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //  Toast.makeText(getActivity().getApplicationContext(), x + "   " + lista_art_temporales.get(x).getId() + " " + lista_art_temporales.get(x).getNombre(), Toast.LENGTH_SHORT).show();
-                //lista_articulos.add(lista_art(jj));
-                if (Integer.parseInt(c8.getText().toString()) > 0) {
-                    c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString()) - 1));
-                    if (mapa_articulos.containsKey(lista_art_temporales.get(x).getId())) {
-                        lista_art_temporales.get(x).setCantidad(Integer.parseInt(c8.getText().toString()));
-
-                        mapa_articulos.put(lista_art_temporales.get(x).getId(), lista_art_temporales.get(x));
-
-                        contador_int = contador_int - 1;
-                        //contador.setText(contador_int.toString());
-
-                        if (mapa_articulos.get(lista_art_temporales.get(x).getId()).getCantidad() == 0) {
-                            mapa_articulos.remove(lista_art_temporales.get(x).getId());
-                            counter--;
-                        }
-
-                    }
-                }
-
-            }
-        });
-
-        Button c9 = new Button(getActivity().getApplicationContext());
-        c9.setText("+");
-        c9.setLayoutParams(new TableRow.LayoutParams(Math.round(54 * scale), Math.round(36 * scale)));
-        c9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(getActivity().getApplicationContext(), x + " " + lista_art_temporales.get(x).getId() + " " + lista_art_temporales.get(x).getNombre(), Toast.LENGTH_SHORT).show();
-                //lista_articulos.add(lista_art(jj));
-                c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString()) + 1));
-                lista_art_temporales.get(x).setCantidad(Integer.parseInt(c8.getText().toString()));
-                if (mapa_articulos.containsKey(lista_art_temporales.get(x).getId())) {
-
-                } else {
-                    counter++;
-                }
-                lista_art_temporales.get(x).setCounter(counter);
-                mapa_articulos.put(lista_art_temporales.get(x).getId(), lista_art_temporales.get(x));
-                //    listaArticulos.put(lista_art_temporales.get(x).getNombre(),lista_art_temporales.get(x));
-
-
-                contador_int = contador_int + 1;
-                contador.setText(contador_int.toString());
-
-
-            }
-        });
-
-        Button btn_refe_extra = new Button(getActivity().getApplicationContext());
-        btn_refe_extra.setText("REFERENCIA");
-        btn_refe_extra.setLayoutParams(new TableRow.LayoutParams(Math.round(120 * scale), Math.round(36 * scale)));
-        btn_refe_extra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                LayoutInflater inflater = getActivity().getLayoutInflater();
-                View dialogView = inflater.inflate(R.layout.referencia_comida, null);
-                builder.setView(dialogView);
-                final AlertDialog dialog = builder.create();
-
-                final Button busclie_btn_aceptar = (Button) dialogView.findViewById(R.id.btn_test);
-                final EditText busclie_etx_nom = (EditText) dialogView.findViewById(R.id.edit_test);
-
-                busclie_btn_aceptar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString())/* + 1*/));
-                        lista_art_temporales.get(x).setCantidad(Integer.parseInt(c8.getText().toString()));
-                        if (mapa_articulos.containsKey(lista_art_temporales.get(x).getId())) {
-
-                        } /*else {
-                            counter++;
-                        }*/
-                        lista_art_temporales.get(x).setCounter(counter);
-                        lista_art_temporales.get(x).setReferencia(busclie_etx_nom.getText().toString());
-                        mapa_articulos.put(lista_art_temporales.get(x).getId(), lista_art_temporales.get(x));
-                        //    listaArticulos.put(lista_art_temporales.get(x).getNombre(),lista_art_temporales.get(x));
-
-
-                        ///contador_int = contador_int + 1;
-                        ///contador.setText(contador_int.toString());
-                        //alertReferenciaGlobal(x);
-                        dialog.cancel();
-
-
-
-                        /*Intent i = new Intent(getActivity().getApplicationContext(), PedidosPendientes.class);
-                        Bundle b = new Bundle();
-                        b.putString("refextra",busclie_etx_nom.getText().toString());
-                        i.putExtras(b);*/
-                        //startActivity(i);
-                        
-
-
-                        
-
-
-
-
-                    }
-                });
-
-              /*  builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });*/
-
-                dialog.show();
-              // builder.create();
-         //   }
-              /*  AlertDialog.Builder builder = new AlertDialog.Builder(getActivity().getApplicationContext());
-                LayoutInflater inflater = getActivity().getLayoutInflater();
-                View dialogView = inflater.inflate(R.layout.referencia_comida, null);
-                builder.setView(dialogView);
-
-
-                Button busclie_btn_aceptar = (Button) dialogView.findViewById(R.id.btn_test);
-                //    Button busclie_btn_cancelar = (Button) dialogView.findViewById(R.id.busclie_btn_cancelar);
-
-
-                final EditText busclie_etx_nom = (EditText) dialogView.findViewById(R.id.edit_test);
-
-                busclie_etx_nom.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
-
-
-
-                final AlertDialog dialog = builder.create();
-
-                busclie_btn_aceptar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        c8.setText(String.valueOf(Integer.parseInt(c8.getText().toString()) + 1));
-                        lista_art_temporales.get(x).setCantidad(Integer.parseInt(c8.getText().toString()));
-                        if (mapa_articulos.containsKey(lista_art_temporales.get(x).getId())) {
-
-                        } else {
-                            counter++;
-                        }
-                        lista_art_temporales.get(x).setCounter(counter);
-                        lista_art_temporales.get(x).setReferencia(busclie_etx_nom.getText().toString());
-                        mapa_articulos.put(lista_art_temporales.get(x).getId(), lista_art_temporales.get(x));
-                        //    listaArticulos.put(lista_art_temporales.get(x).getNombre(),lista_art_temporales.get(x));
-
-
-                        contador_int = contador_int + 1;
-                        contador.setText(contador_int.toString());
-
-
-
-                    }
-                });
-
-  /*      busclie_btn_cancelar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-            }
-        });*/
-
-              //  dialog.show();
-            }
-
-
-
-
-
-
-
-
-
-        });
-
-        layout00.addView(c7);
-        layout00.addView(c8);
-        layout00.addView(c9);
 
 
 
         layout2.addView(bt);
         layout2.addView(c4);
         layout2.addView(c6);
-        layout2.addView(c3);
-        layout2.addView(btn_refe_extra);
         layout2.addView(layout00);
 
         return layout2;
@@ -832,8 +613,8 @@ public class MenuArticulosLineas2 extends Fragment {
         GifImageView imagen = new GifImageView(getActivity().getApplicationContext());
         imagen.setImageResource(R.drawable.loader);
         prices.addView(imagen);
-     HttpAsyncTask7 a = new HttpAsyncTask7();
-    a.execute(server + "/medialuna/spring/listar/entidad/filtro/documentoArticulosCaracteristicas/");
+        HttpAsyncTask7 a = new HttpAsyncTask7();
+        a.execute(server + "/medialuna/spring/listar/entidad/filtro/documentoArticulosCaracteristicas/");
     }
 
 
@@ -896,12 +677,12 @@ public class MenuArticulosLineas2 extends Fragment {
             laSerieNombre = info.get("serie");
             elCliente = info.get("cliente_id");
             if(info.get("impuesto")!=null)
-            impuesto = Double.parseDouble(info.get("impuesto"));
+                impuesto = Double.parseDouble(info.get("impuesto"));
             if(info.get("lprecio")!=null)
-             laMoneda= Integer.parseInt(info.get("lprecio"));
+                laMoneda= Integer.parseInt(info.get("lprecio"));
             elAgente = info.get("agente_id");
             if(info.get("idDireccion")!=null)
-            laDireccion = Integer.parseInt(info.get("idDireccion"));
+                laDireccion = Integer.parseInt(info.get("idDireccion"));
 
             System.out.println("info " + info);
         } catch (JsonParseException e1) {
@@ -976,9 +757,9 @@ public class MenuArticulosLineas2 extends Fragment {
             Toast.makeText(getActivity().getApplicationContext(), "Documento modificado" + result, Toast.LENGTH_LONG).show();
             Intent  i = new Intent(getActivity().getApplicationContext(), MenuMesas.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-         //   i.putExtra("idMesa", lista_art_temporales.get(x).getIndexMesa().toString());
+            //   i.putExtra("idMesa", lista_art_temporales.get(x).getIndexMesa().toString());
             i.putExtra("tipo_documento", tipo_documento);
-         //   i.putExtra("idDocumento", lista_art_temporales.get(x).getIdDocumento().toString());
+            //   i.putExtra("idDocumento", lista_art_temporales.get(x).getIdDocumento().toString());
 
             startActivity(i);
             getActivity().finish();
@@ -988,7 +769,7 @@ public class MenuArticulosLineas2 extends Fragment {
 
 
     public String POST8(String url)  {
-       HashMap t0 = new HashMap();
+        HashMap t0 = new HashMap();
 
         Double total_subtotal = 0.0;
         for(int i = 0; i< productos_list.size(); i++){
@@ -1000,19 +781,19 @@ public class MenuArticulosLineas2 extends Fragment {
         t0.put("producto", productos_list);
         t0.put("@class", ArrayList.class.getName());
 
-      HashMap map2 = new HashMap();
+        HashMap map2 = new HashMap();
         map2.put("id_documento", id_doc);  //id Tercero
         map2.put("entidad", 4);
         map2.put("@class", HashMap.class.getName());
 
-      HashMap totalisimo = new HashMap();
+        HashMap totalisimo = new HashMap();
         totalisimo.put("map2",map2.toString());
         totalisimo.put("t0",t0.toString());
         totalisimo.put("@class", HashMap.class.getName());
 
-       JSONObject jsonOBJECT1 = new JSONObject(totalisimo);
-       String result = "";
-       InputStream inputStream = null;
+        JSONObject jsonOBJECT1 = new JSONObject(totalisimo);
+        String result = "";
+        InputStream inputStream = null;
         try {
 
             DefaultHttpClient httpclient = new DefaultHttpClient();
@@ -1388,7 +1169,7 @@ public class MenuArticulosLineas2 extends Fragment {
 
 
         Button busclie_btn_aceptar = (Button) dialogView.findViewById(R.id.btn_test);
-    //    Button busclie_btn_cancelar = (Button) dialogView.findViewById(R.id.busclie_btn_cancelar);
+        //    Button busclie_btn_cancelar = (Button) dialogView.findViewById(R.id.busclie_btn_cancelar);
 
 
         final EditText busclie_etx_nom = (EditText) dialogView.findViewById(R.id.edit_test);

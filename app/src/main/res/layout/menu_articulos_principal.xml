@@ -2,50 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gm3s.erp.gm3srest.MenuArticulosLineas"
+    tools:context="com.gm3s.erp.gm3srest.MenuArticulosPrincipal"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OK"
             android:id="@+id/ok_button" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/contador"
-            android:layout_toLeftOf="@+id/contador"
-            android:src="@drawable/bagicon" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" Articulos"
-            android:id="@+id/textView6"
-            android:layout_alignBottom="@+id/imageView2"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/contador"
-            android:layout_alignTop="@+id/textView6"
-            android:layout_toLeftOf="@+id/textView6"
-            android:layout_toStartOf="@+id/textView6"
-            android:text="0"
-            android:gravity="center" />
 
         <TextView
             android:id="@+id/titulo"
@@ -57,14 +25,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
-
-    <Switch
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agrupar"
-        android:id="@+id/switch_agrupar"
-        android:gravity="center"
-        android:visibility="invisible" />
 
     <ScrollView
         android:id="@+id/layout"

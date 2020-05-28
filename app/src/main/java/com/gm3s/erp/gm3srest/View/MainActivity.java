@@ -30,7 +30,9 @@ import com.gm3s.erp.gm3srest.AsignacionDeStacks;
 import com.gm3s.erp.gm3srest.BusquedaInventario;
 import com.gm3s.erp.gm3srest.ConsultarStacks;
 import com.gm3s.erp.gm3srest.ConsultarUbicacionRack;
+import com.gm3s.erp.gm3srest.ContenedorFragmentos2;
 import com.gm3s.erp.gm3srest.ContenedorFragmentos3;
+import com.gm3s.erp.gm3srest.ContenedorFragmentosConsultaMenu;
 import com.gm3s.erp.gm3srest.Honorarios;
 import com.gm3s.erp.gm3srest.ListaArticuloProovedor;
 import com.gm3s.erp.gm3srest.MenuCajas;
@@ -320,6 +322,12 @@ public class MainActivity extends AppCompatActivity
                 Intent intent = new Intent(this, MenuMesas.class);
                 System.out.println("user1 " +user);
                 intent.putExtra("user", user);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(intent);
+            }
+
+            if (id == R.id.nav_opc5_1){
+                Intent intent = new Intent(this, ContenedorFragmentosConsultaMenu.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intent);
             }

@@ -39,7 +39,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MenuLineas2 extends Fragment {
+public class MenuLineasPrincipal extends Fragment {
     private static boolean validacion;
     TableLayout prices;
     String server = "";

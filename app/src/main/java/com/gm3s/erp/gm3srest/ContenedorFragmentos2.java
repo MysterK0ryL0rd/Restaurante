@@ -1,5 +1,6 @@
 package com.gm3s.erp.gm3srest;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
@@ -13,9 +14,11 @@ public class ContenedorFragmentos2 extends FragmentActivity implements MenuLinea
 
     @Override
     public void sendData(String message, String title) {
-        MenuArticulosLineas2 f2 = (MenuArticulosLineas2)getFragmentManager().findFragmentById(R.id.ejemplo2);
+        MenuArticulosLineas2 f2 = (MenuArticulosLineas2) getFragmentManager().findFragmentById(R.id.ejemplo2);
         f2.getData(message, title);
     }
 
 
 }
+
+

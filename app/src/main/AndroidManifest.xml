@@ -17,14 +17,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.camera" />
-    <!-- <uses-feature android:name="android.hardware.camera.autofocus" /> -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- <uses-feature android:name="android.hardware.camera.autofocus" /> -->
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true" />
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -36,10 +34,10 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="GM3s Food"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".View.LogIn"
-            android:label="GM3s Food" >
+            android:label="GM3s Food">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -77,63 +75,43 @@
         <activity android:name=".Honorarios" />
         <activity android:name=".Arrendamiento" />
         <activity android:name=".NuevoMenu" />
-        <activity android:name=".MenuCliente" >
-        </activity>
-        <activity android:name=".DescripcionCliente" >
-        </activity>
-        <activity android:name=".ReporteVentasNetas" >
-        </activity>
-        <activity android:name=".Pedido" >
-        </activity>
-        <activity android:name=".FacturaArticulos" >
-        </activity>
-        <activity android:name=".View.DocumentoBluetooth" >
-        </activity>
-        <activity android:name=".View.DocumentoCamara" >
-        </activity>
+        <activity android:name=".MenuCliente" />
+        <activity android:name=".DescripcionCliente" />
+        <activity android:name=".ReporteVentasNetas" />
+        <activity android:name=".Pedido" />
+        <activity android:name=".FacturaArticulos" />
+        <activity android:name=".View.DocumentoBluetooth" />
+        <activity android:name=".View.DocumentoCamara" />
         <activity
             android:name=".ContenedorFragmentos"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ContenedorFragmentos2"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ContenedorFragmentos3"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ContenedorFragmentosConsultaMenu"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MenuMesas"
             android:label="@string/title_activity_menu_mesas"
-            android:theme="@style/AppTheme" >
-        </activity>
-        <activity android:name=".MenuComensales" >
-        </activity>
-        <activity android:name=".Comanda" >
-        </activity>
-        <activity android:name=".ComandasGeneral" >
-        </activity>
-        <activity android:name=".PreComanda" >
-        </activity>
-        <activity android:name=".ComandasParticular" >
-        </activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MenuComensales" />
+        <activity android:name=".Comanda" />
+        <activity android:name=".ComandasGeneral" />
+        <activity android:name=".PreComanda" />
+        <activity android:name=".ComandasParticular" />
         <activity
             android:name=".PedidosPendientes"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name=".Direccion" >
-        </activity>
-        <activity android:name=".ComidaCorrida" >
-        </activity>
-        <activity android:name=".MenuCajas" >
-        </activity>
-        <activity android:name=".ConfiguracionRestaurante" >
-        </activity>
-        <activity android:name=".ActividadVacia" >
-        </activity>
-        <activity android:name=".CuentaPorComensal" >
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Direccion" />
+        <activity android:name=".ComidaCorrida" />
+        <activity android:name=".MenuCajas" />
+        <activity android:name=".ConfiguracionRestaurante" />
+        <activity android:name=".ActividadVacia" />
+        <activity android:name=".CuentaPorComensal" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -146,30 +124,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".OrdenAutomatica" >
-        </activity>
-        <activity android:name=".CapturarOrdenServicio" >
-        </activity>
-        <activity android:name=".ProgramacionCirugia" >
-        </activity>
-        <activity android:name=".InformeCirugia" >
-        </activity>
-        <activity android:name=".ControlVehicular" >
-        </activity>
-        <activity android:name=".View.ListaOrdenServicio" >
-        </activity>
-        <activity android:name=".View.CamposAdicionalesOS" >
-        </activity>
-        <activity android:name=".UploadPhoto" >
-        </activity>
-        <activity android:name=".PayPal.PayPalActivity" >
-        </activity>
-        <activity android:name=".AsignacionDeStacks" >
-        </activity>
-        <activity android:name=".ConsultarStacks" >
-        </activity>
-        <activity android:name=".ConsultarUbicacionRack" >
-        </activity>
+        <activity android:name=".OrdenAutomatica" />
+        <activity android:name=".CapturarOrdenServicio" />
+        <activity android:name=".ProgramacionCirugia" />
+        <activity android:name=".InformeCirugia" />
+        <activity android:name=".ControlVehicular" />
+        <activity android:name=".View.ListaOrdenServicio" />
+        <activity android:name=".View.CamposAdicionalesOS" />
+        <activity android:name=".UploadPhoto" />
+        <activity android:name=".PayPal.PayPalActivity" />
+        <activity android:name=".AsignacionDeStacks" />
+        <activity android:name=".ConsultarStacks" />
+        <activity android:name=".ConsultarUbicacionRack" />
     </application>
 
 </manifest>

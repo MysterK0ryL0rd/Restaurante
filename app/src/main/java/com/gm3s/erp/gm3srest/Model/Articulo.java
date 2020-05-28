@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class Articulo implements Serializable {
     private Integer id;
-    private String descripcion;
+    private String descripcion ="";
     private Double existencia;
     private String nombre;
     private String nombreCorto;
@@ -18,11 +18,13 @@ public class Articulo implements Serializable {
     private Integer codigoUsuario;
     private Integer cantidad = 0;
     private String referencia = "";
+    private String awsUrl = "";
+    private String photo ="";
 
     public Articulo(Integer id, String descripcion, Double existencia, String nombre, String nombreCorto, Double precioBase, Double precioLista, Double impuesto) {
         this.id = id;
-        if(descripcion.length()>24){
-            this.descripcion = descripcion.substring(0,24) + " ";
+        if(descripcion.length()>10000){
+            this.descripcion = descripcion.substring(0,9999) + " ";
         } else {
             this.descripcion = descripcion+ " ";
         }
@@ -34,10 +36,10 @@ public class Articulo implements Serializable {
         this.impuesto = impuesto;
     }
 
-    public Articulo(Integer id, String descripcion, Double existencia, String nombre, String nombreCorto, Double precioBase, Double precioLista, Double impuesto,String referencia) {
+    public Articulo(Integer id, String descripcion, Double existencia, String nombre, String nombreCorto, Double precioBase, Double precioLista, Double impuesto,String referencia, String awsUrl) {
         this.id = id;
-        if(descripcion.length()>24){
-            this.descripcion = descripcion.substring(0,24) + " ";
+        if(descripcion.length()>10000){
+            this.descripcion = descripcion.substring(0,9999) + " ";
         } else {
             this.descripcion = descripcion+ " ";
         }
@@ -48,6 +50,8 @@ public class Articulo implements Serializable {
         this.precioLista = precioLista;
         this.impuesto = impuesto;
         this.referencia = referencia;
+        this.awsUrl = awsUrl;
+        //this.photo = photo;
     }
 
 
@@ -60,8 +64,8 @@ public class Articulo implements Serializable {
 
     public Articulo(Integer id, String descripcion,Double existencia, String nombre, String nombreCorto, Double precioBase, Double impuesto) {
         this.id = id;
-        if(descripcion.length()>25){
-            this.descripcion = descripcion.substring(0,24) + " ";
+        if(descripcion.length()>10000){
+            this.descripcion = descripcion.substring(0,9999) + " ";
         } else {
             this.descripcion = descripcion+ " ";
         }
@@ -74,8 +78,8 @@ public class Articulo implements Serializable {
 
     public Articulo(Integer id, String descripcion,Double existencia, String nombre, String nombreCorto, Double precioBase, Double impuesto, Integer counter) {
         this.id = id;
-        if(descripcion.length()>25){
-            this.descripcion = descripcion.substring(0,24) + " ";
+        if(descripcion.length()>10000){
+            this.descripcion = descripcion.substring(0,9999) + " ";
         } else {
             this.descripcion = descripcion+ " ";
         }
@@ -90,8 +94,8 @@ public class Articulo implements Serializable {
 
     public Articulo(Integer id, String descripcion,Double existencia, String nombre, String nombreCorto, Double precioBase, Double impuesto, Integer counter, Integer cantidad) {
         this.id = id;
-        if(descripcion.length()>25){
-            this.descripcion = descripcion.substring(0,24) + " ";
+        if(descripcion.length()>10000){
+            this.descripcion = descripcion.substring(0,9999) + " ";
         } else {
             this.descripcion = descripcion+ " ";
         }
@@ -204,6 +208,15 @@ public class Articulo implements Serializable {
         this.referencia = referencia;
     }
 
+
+    public String getAwsUrl() {
+        return awsUrl;
+    }
+
+    public void setAwsUrl(String awsUrl) {
+        this.awsUrl = awsUrl;
+    }
+
     @Override
     public String toString() {
         return
@@ -217,7 +230,8 @@ public class Articulo implements Serializable {
                 ", impuesto=" + impuesto +
                 ", counter=" + counter +
                 ", codigoUsuario=" + codigoUsuario +
-                ", cantidad=" + cantidad +
-                        ", extra=" + referencia;
+                        ", cantidad=" + cantidad +
+                        ", extra=" + referencia +
+                        ", awsUrl=" + awsUrl;
     }
 }

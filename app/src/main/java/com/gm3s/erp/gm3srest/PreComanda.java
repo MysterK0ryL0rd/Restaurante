@@ -319,7 +319,7 @@ public class PreComanda extends AppCompatActivity {
         if(scale<2)
             scale=Float.parseFloat("1.8");
         //  Toast.makeText(getApplicationContext(), String.valueOf(scale), Toast.LENGTH_LONG).show();
-        layout2.setLayoutParams(new LinearLayout.LayoutParams(Math.round(180 * scale), Math.round(200 * scale))); //500 500 cel
+        layout2.setLayoutParams(new LinearLayout.LayoutParams(Math.round(180 * scale), Math.round(220 * scale))); //500 500 cel
 
         layout2.setOrientation(LinearLayout.VERTICAL);
         layout2.setBackgroundColor(Color.parseColor(colors[x % 6]));
@@ -498,14 +498,14 @@ public class PreComanda extends AppCompatActivity {
             List<List<Object>> arrayData1 = mapper.readValue(cadena, List.class);
             System.out.println("arrayData1:" + arrayData1);
 
-            for (int i = 0; i < arrayData1.size(); i++) {
+            for (int i = 1; i < arrayData1.size(); i++) {
 
-                for (int j = 1; j < arrayData1.get(i).size(); j++) {
+                for (int j = 2; j < arrayData1.get(i).size(); j++) {
 
                     System.out.println("for 2: "+ arrayData1.get(i).get(j).toString());
 
-                    List infopartidas = (List) arrayData1.get(i).get(j);
-                    //List<Object> infopartidas = (List) arrayData1.get(i).get(j);
+                    //List infopartidas = (List) arrayData1.get(i).get(j);
+                    List<Object> infopartidas = (List) arrayData1.get(i).get(j);
                     Double total =(Double)((ArrayList) infopartidas.get(3)).get(1);
                     //+ Double.parseDouble(Helper.formatDouble(total).toString())
 
